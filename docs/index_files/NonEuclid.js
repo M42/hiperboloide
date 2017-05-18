@@ -172,7 +172,7 @@ function init() {
   setSize();
   var a = 'IsoscelesTriangle.csv',
   b = Math.random();
-  0.125 > b ? a = 'TriangleMedianAndCentroid.csv' : 0.25 > b ? a = 'Circle.csv' : 0.375 >
+  0.125 > b ? a = 'saccheri.csv' : 0.25 > b ? a = 'Circle.csv' : 0.375 >
   b ? a = 'WhatIsNonEuclid.csv' : 0.5 > b ? a = 'ParallelLines.csv' : 0.625 > b ? a = 'Rhombus.csv' : 0.75 > b ? a = 'Pseudosphere.csv' : 0.875 > b && (a = 'Altitude.csv');
   loadFromServer(a)
 }
@@ -597,8 +597,8 @@ function menuMeasureChange(a) {
 function menuGalleryChange() {
   clearSelection();
   var a = menuGallery.value;
-  'What is Non-Euclidean Geometry?' === a ? loadFromServer('WhatIsNonEuclid.csv')  : 'Circle' === a ? loadFromServer('Circle.csv')  : 'Isosceles Triangle' === a ? loadFromServer('IsoscelesTriangle.csv')  : 'Altitudes' === a ? loadFromServer('Altitude.csv')  : 'Area' === a ? loadFromServer('Area.csv')  : 'Pseudosphere' === a ? loadFromServer('Pseudosphere.csv')  : 'Parallel Lines' === a ? loadFromServer('ParallelLines.csv')  : 'Rhombus' === a ? loadFromServer('Rhombus.csv')  : 'Triangle Medians and Centroid' ===
-  a ? loadFromServer('TriangleMedianAndCentroid.csv')  : 'ModeLoadLocal' === a ? showFileOpenDialog()  : 'ModeSave' === a && saveConstruction()
+  'What is Non-Euclidean Geometry?' === a ? loadFromServer('WhatIsNonEuclid.csv')  : 'Circle' === a ? loadFromServer('Circle.csv')  : 'Isosceles Triangle' === a ? loadFromServer('IsoscelesTriangle.csv')  : 'Altitudes' === a ? loadFromServer('Altitude.csv')  : 'Area' === a ? loadFromServer('Area.csv')  : 'Pseudosphere' === a ? loadFromServer('Pseudosphere.csv')  : 'Parallel Lines' === a ? loadFromServer('ParallelLines.csv')  : 'Rhombus' === a ? loadFromServer('Rhombus.csv')  : 'Saccheri' ===
+  a ? loadFromServer('saccheri.csv')  : 'ModeLoadLocal' === a ? showFileOpenDialog()  : 'ModeSave' === a && saveConstruction()
 }
 function select(a) {
   mousePixelX = a.offsetX;
