@@ -16,7 +16,7 @@
             background-color: #eef8f5;
             color: black;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 120%;
+            font-size: 100%;
         }
 
         h1
@@ -87,7 +87,7 @@
         {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 110%;
-            background: #D5F0D5;
+            background: #EEF8F5;
             color: #000000;
             box-shadow: inset 0 0 3px #606060;
             border: 1px solid #5C685C;
@@ -136,7 +136,7 @@
         .onoffswitch-label
         {
             display: block; overflow: hidden; cursor: pointer;
-            border: 2px solid #00500a; border-radius: 20px;
+            border: 2px solid #000000; border-radius: 20px;
         }
 
         .onoffswitch-inner
@@ -155,16 +155,16 @@
 
         .onoffswitch-inner:before
         {
-            content: "Animation ON";
+            content: "Animación ON";
             padding-left: 10px;
-            background-color: #000000; color: #00c800;
+            background-color: #FFD7BA; color: #404040;
         }
 
         .onoffswitch-inner:after
         {
-            content: "Animation OFF";
+            content: "Animación OFF";
             padding-right: 10px;
-            background-color: #000000; color: #909090;
+            background-color: #FFD7BA; color: #909090;
             text-align: right;
             font-weight: bold;
         }
@@ -175,7 +175,7 @@
             background: #eef8f5;
             position: absolute; top: 0; bottom: 0;
             right: 110px;
-            border: 2px solid #00500a; border-radius: 20px;
+            border: 2px solid #000000; border-radius: 20px;
             transition: all 0.3s ease-in 0s;
         }
 
@@ -195,7 +195,7 @@
         input[type=color]:hover
         {
             border:2px solid #FFFFFF;
-            background-color: #b9ceed;
+            background-color: #d0e4f3;
         }
     </style>
 
@@ -215,8 +215,8 @@
 <table class="noBorder">
     <tbody><tr>
 
-        <td class="noBorder"><div class="box" style="background-color: #90a4c3;margin-left: 50px;margin-right: 60px;margin-top: 25px;">
-            <select id="menuConstruct" style="background-color: #b9ceed;">
+        <td class="noBorder"><div class="box" style="background-color: #d0e4f3;margin-left: 50px;margin-right: 60px;margin-top: 25px;">
+            <select id="menuConstruct" style="background-color: #d0e4f3;">
                 <option value="" disabled="disabled" selected="selected"> -- Selecciona herramienta -- </option>
                 <option value="ModeSegment"> ⁄ &nbsp;&nbsp;&nbsp; Segmento de línea</option>
                 <option value="ModeRay">↗ &nbsp; Rayo</option>
@@ -230,7 +230,7 @@
             <label id="labelConstructHelp"> </label>
         </div><br>
 
-            <div class="box" style="background-color: #e6bea1;margin-left: 50px;margin-right: 60px;">
+            <div class="box" style="background-color: #ffd7ba;margin-left: 50px;margin-right: 60px;">
                <select id="menuMeasure" style="background-color: #ffd7ba;">
                     <option value="" disabled="disabled" selected="selected"> -- Selecciona acción -- </option>
                     <optgroup label="Medidas">
@@ -248,7 +248,7 @@
                     </optgroup>
                 </select> <br>
                 <label id="labelMeasureHelp"> </label><br>
-             Coordenadas polares:<label id="labelCoordinates">(r= −.− , φ= −.−°)</label>
+             Coordenadas polares:<label id="labelCoordinates">(r= 5.466, φ= 179.0°)</label>
             <br>
             <label id="labelMeasurements"></label>
         </div><br>
@@ -344,6 +344,7 @@ false in hyperbolic geometry.</label></div><br>
             </h4>
 
 <h4> Copyright©: Joel Castellanos, 1994-2016</h4>
+
 
 
 
