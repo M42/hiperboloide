@@ -7,7 +7,7 @@
   <meta name="KeyWords" content="Education, Shareware, Freeware, Javascript, Geometry, k12, Non-Euclidean, Math, Mathematics, hyperspace, Pseudosphere, NonEuclid, Euclid, fourth, dimension, teacher, instructional, software, Poincare, Disk Model, ruler-and-compass construction">
   <meta name="Description" content="Ejemplos del espacio hiperbólico sobre NonEuclid, para la asignatura de Taller de Geometría y Topología (UGR).">
                 
-  <title>NonEuclid - Disco de Poincaré</title>
+  <title>Disco de Poincaré - NonEuclid</title>
     <link rel="icon" href="https://www.cs.unm.edu/%7Ejoel/NonEuclid/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="https://www.cs.unm.edu/%7Ejoel/NonEuclid/favicon.ico" type="image/x-icon">
     <style type="text/css">
@@ -206,9 +206,10 @@
 
 <body style="cursor: default;">
 
-<h1>
-  Ejemplos en el espacio hiperbólico
-</h1>
+  <h1>Disco de Poincaré</h1>
+  <br>
+  <h2>Taller de Geometría y Topología  -  Universidad de Granada</h2>
+
 <hr>
 
 
@@ -248,9 +249,9 @@
                     </optgroup>
                 </select> <br>
                 <label id="labelMeasureHelp"> </label><br>
-             Coordenadas polares:<label id="labelCoordinates">(r= 5.466, φ= 179.0°)</label>
+             Coordenadas polares:<label id="labelCoordinates">(r= 5.873, φ= −179.2°)</label>
             <br>
-            <label id="labelMeasurements"></label>
+            <label id="labelMeasurements">Triangle   ABC:<br><table><tbody><tr><td>Length: &nbsp;&nbsp;</td> <td>∣BC∣ = 3.40,&nbsp;&nbsp;&nbsp;</td> <td>∣AC∣ = 3.35,&nbsp;&nbsp;&nbsp;</td> <td>∣AB∣ = 0.79</td></tr> <tr><td>Angle:</td> <td>A = 71.9°,</td> <td>B = 64.0°,</td> <td>C = 3.2°,</td> </tr><tr><td colspan="2">Angle Sum = 139.1°</td><td colspan="2">Area = 40.9°</td></tr></tbody></table><br><br></label>
         </div><br>
 
             <div class="box" style="margin-left: 50px;margin-right: 60px;">
@@ -263,7 +264,7 @@
                     <option value="Isosceles Triangle">4) Isosceles Triangle</option>
                     <option value="Altitudes">5) Altitudes of a Triangle</option>
                     <option value="Area">6) Area</option>
-                    <option value="Triangle Medians and Centroid">7) Triangle Median and Centroid</option>
+                    <option value="Saccheri">7) Cuadriláteros de Saccheri</option>
                     <option value="Rhombus">8) Rhombus</option>
                     <option value="Pseudosphere">9) Pseudosphere</option>
                 </optgroup>
@@ -272,27 +273,59 @@
                     <option value="ModeLoadLocal">Cargar...</option>
                 </optgroup>
             </select><br>
-            <b><label id="labelTitle">Parallel Lines</label></b><br>
-            <label id="labelComments">Herein lies the crux of hyperbolic geometry.<br>All axioms of Euclidean geometry <b><i>except the parallel axiom</i></b> apply in hyperbolic geometry. The Euclidean geometry parallel axiom states:<q>Given
- a line, AB, and a point C not on that line, there is one and only one 
-line which contains the point C, and is parallel to AB.</q>By contrast, the parallel axiom in hyperbolic geometry is: <q>Given a line AB and a point C not on that line, there are at least two distinct lines which contain C, and are parallel to AB.</q>When thinking about this, keep in mind the strict geometric definitions:<ul><li><em>Parallel lines</em> are lines in a plane which do not intersect.</li><li>A <em>line</em> is a straight path that has no thickness and is endless in both directions.</li></ul>
- When looking at the construction, it might seem there are a few 
-problems with calling AB, DC and EC lines: 1) they do not look straight 
-and 2) they do not seem endless. However, when viewing objects in the 
-disk model, keep in mind that: <ol><li>The lines look curved because you
- are viewing them from outside the model. If you were inside a 
-hyperbolic space, then light traveling from A to B would follow the path
- drawn from A to B. If you were in the hyperbolic space, the hyperbolic 
-lines would look (and be) straight.</li><li> The edge of the disk is infinitely far from every point within the disk.</li></ol>
- The overall effect of the nature of parallel lines is that any theorm 
-that can be proved in Euclidean geometry without using the parallel 
-axiom will also be a theorm in hyperbolic geometry. Contrariwise, many 
-Euclidean geometry theorms that depends on the parallel axiom will be 
-false in hyperbolic geometry.</label></div><br>
+            <b><label id="labelTitle"><br>Modelo del disco de Poincaré<br></label></b><br>
+            <label id="labelComments">In ancient Greece, the mathematician Euclid wrote a textbook on geometry titled "<i>The Elements</i>".
+ The textbook begins with a small set of intuitively appealing 
+assumptions, then uses deduction to develop many propositions. Although 
+many of Euclid's results had been stated by earlier mathematicians, 
+Euclid was the first to show how these propositions could fit into a 
+comprehensive logical system. Many of the propositions developed in <i>The Elements</i>
+ are currently taught in secondary school around the world as the first 
+axiomatic system and the first examples of formal proof. For example, 
+Euclid's Proposition #27 could be translated:<q>If two lines are crossed
+ by a third line such that the alternate interior angles are congruent, 
+then the two lines must be parallel.</q> This statement is then followed
+ by a formal explanation that relies only on the original set of 
+assumptions and Euclid's propositions #1 through #26.<br><br> For more 
+than two thousand years, the prevailing scholarly thought was that no 
+contradictory logical system could be conceived. It was not until the 
+early 19th century that the first fully self-consistent, yet different 
+geometry was developed. This first <em>non-Euclidean geometry</em> came to be known as <em>hyperbolic geometry</em>
+ and it differs from Euclidian geometry in only one of Euclid's original
+ assumptions: hyperbolic geometry assumes that through a point there 
+exists at least two distinct lines that are both parallel to a third 
+line. Today, many other self-consistent non-Euclidean geometries are 
+known.<br><br>When these non-Euclidian geometries were first developed 
+they were of profound philosophical interest, but it seemed oblivious 
+through the success of architectural engineering, surveying and other 
+sciences, that the universe adheres to Euclidian geometry. However, an 
+implication of Albert Einstein's 1915 theory of general relativity is 
+that physical space itself varies as a function the local gravitational 
+field from a very slightly curved hyperbolic geometry that is almost 
+indistinguishable from Euclidean to a strongly curved hyperbolic 
+geometry. Euclidean space is a good approximation of our universe only 
+over small distances (small compared to the size of the universe) and 
+only where the gravitational field is week (compared to near the surface
+ of a sun). On Earth, our current instrumentation is insufficiently 
+accurate to distinguish between Euclidian geometry and a hyperbolic 
+geometry with Einstein's predicted amount of curvature. However, current
+ technology can detect the predicted curvature of space in Mercury's 
+Orbit. The planet Mercury is near the sun and thus in a significantly 
+higher gravitational field than the Earth. If measured at three points 
+in its orbit, the triangle formed has very slightly less than 180°!<br><br>NonEuclid
+ uses a particular model of two-dimensional hyperbolic geometry, called 
+the Poincaré disk model. This model has an extremely high level of 
+curvature so it is easy to see it as different from Euclidian geometry. 
+It would not be too inaccurate to think of NonEuclid as being a model of
+ 2D space near the event horizon of a small black hole (that is, if you 
+could stay alive long enough to measure triangles).<br><br> In the 
+accompanying construction, try moving the vertices to make one triangle 
+very large and the other very small. Notice that very large triangles 
+look strange and very small triangles look <i>almost</i> like Euclidian triangles.</label></div><br>
         </td>
 
 	<td class="noBorder">
-          <canvas id="canvas" width="700" height="700" style="margin-right: 100px;margin-left: 50px;">
+          <canvas id="canvas" width="700" height="700" style="margin-right: 100px;margin-left: 50px;margin-top: 50px;">
 	        El navegador debe soportar Canvas de HTML5.
             </canvas><br>
             <div class="onoffswitch">
@@ -323,8 +356,8 @@ false in hyperbolic geometry.</label></div><br>
 
 <hr>
 <h4>
-                <b> Esta página ha sido construida sobre el software <a href="https://www.cs.unm.edu/%7Ejoel/NonEuclid/">NonEuclid</a> de Joel Castellanos. <br> </b>
-                <b> Authors: <br> </b>
+                <b> Esta página ha sido construida por Mario Román y Eva María González sobre el software <a href="https://www.cs.unm.edu/%7Ejoel/NonEuclid/">NonEuclid</a> de Joel Castellanos. <br> </b>
+                <b> Autores originales: <br> </b>
                 <a href="http://cs.unm.edu/%7Ejoel">Joel Castellanos</a>,
                 <a href="http://www.cs.unm.edu/">Dept. of Computer Science,
                     University of New Mexico</a><br>
@@ -341,9 +374,11 @@ false in hyperbolic geometry.</label></div><br>
 
                 <a href="http://www.admin.ias.edu/ma/">  The Institute for Advanced Study /
                     Park City Mathematics Institute</a> <br>
-            </h4>
+</h4>
 
-<h4> Copyright©: Joel Castellanos, 1994-2016</h4>
+<h4> Modificado por Eva María García y Mario Román a 2017</h4>
+<h4> Original Copyright©: Joel Castellanos, 1994-2016</h4>
+
 
 
 
