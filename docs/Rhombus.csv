@@ -1,0 +1,18 @@
+NonEuclid fileFormat.1.0
+Rhombus
+Given four points A, B, C, and D, such that they all lie in the same plane, but no three are collinear. If the segments AB, BC, CD, and DA intersect only at their endpoints, then their union is called a <em>quadrilateral</em>.<br><br>A <em>rhombus</em> is a quadrilateral in which all four sides have equal length.<br><br>In the accompanying construction, &#9645;ABCD is a rhombus. Proof: Each of the four sides is a either radius of &#8857;AB or &#8857;BA and &#8857;AB &cong; &#8857;BA because they have a common radius.<br><br>In Euclidean geometry, the answser to each of the following questions is "yes". Which are true in hyperbolic geometry? If you think something is not true, prove it by constructing a counter-example.<ol><li>Are the opposite angles of a rhombus congruent?</li><li>Do the diagonals of a rhombus bisect each other?</li><li>Are the diagonals of a rhombus perpendicular?</li><li>A <em>regular quadrilateral</em> is a quadrilateral that is both equilateral and equiangular. Is it possible to construct a regular quadrilateral in hyperbolic geometry? Note: in the given construction, it is impossible to move points A and B so as to make the four angles of &#9645;ABCD congruent. However, that does not necessary mean there is no possible construction for a regular quadrilateral. Can you find one?</li></ol>
+70
+7,false,#463264,-0.43142857142857144,-0.22857142857142856,A,-4.0000,-8.0000,-1,-1,false
+7,false,#463264,0.3342857142857143,0.6257142857142857,B,11.0000,11.0000,-1,-1,false
+4,false,#008000,0,1,-1
+4,false,#008000,1,0,-1
+5,false,#463264,0.6925312337788706,-0.2084584732859838,C,8.0000,-4.0000,3,2,false
+5,false,#463264,-0.41590434054805164,0.7054550645750453,D,0.5447,17.5347,3,2,true
+1,false,#1560DC,0,4,-1
+1,false,#1560DC,1,4,-1
+1,false,#1560DC,0,5,-1
+1,false,#1560DC,5,1,-1
+10,false,#000000,0,4,-1
+10,false,#000000,4,1,-1
+10,false,#000000,1,5,-1
+10,false,#000000,5,0,-1
