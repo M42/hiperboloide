@@ -598,7 +598,7 @@ function menuGalleryChange() {
   clearSelection();
   var a = menuGallery.value;
   'What is Non-Euclidean Geometry?' === a ? loadFromServer('WhatIsNonEuclid.csv')  : 'Circle' === a ? loadFromServer('Circle.csv')  : 'Isosceles Triangle' === a ? loadFromServer('IsoscelesTriangle.csv')  : 'Altitudes' === a ? loadFromServer('Altitude.csv')  : 'Area' === a ? loadFromServer('Area.csv')  : 'Pseudosphere' === a ? loadFromServer('Pseudosphere.csv')  : 'Parallel Lines' === a ? loadFromServer('ParallelLines.csv')  : 'Rhombus' === a ? loadFromServer('Rhombus.csv')  : 'Saccheri' ===
-  a ? loadFromServer('saccheri.csv')  : 'ModeLoadLocal' === a ? showFileOpenDialog()  : 'ModeSave' === a && saveConstruction()
+a ? loadFromServer('saccheri.csv')  : 'ModeLoadLocal' === a ? showFileOpenDialog()  : 'ModeSave' === a && saveConstruction()
 }
 function select(a) {
   mousePixelX = a.offsetX;
@@ -682,7 +682,8 @@ function loadFromServerReady(a) {
     var b = fileObject.responseText;
     initializationDone ? clear(MODE.MOVE_POINT)  : clear(MODE.ANIMATE);
     loadFromString(a, b);
-    initializationDone || initPart2()
+      initializationDone || initPart2();
+      MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
   }
 }
 function loadLocalFile(a) {
