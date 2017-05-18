@@ -1,0 +1,8 @@
+ltximg/*
+*.aux
+*.log
+*.out
+*.pdf
+*.snm
+*.toc
+*.nav
