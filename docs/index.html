@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8">    
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">    
                 
   <meta name="Author" content="Joel Castellanos">
   <meta name="Classification" content="Education, Mathematics, Geometry, Freeware, Javascript">
@@ -199,8 +199,8 @@
         }
     </style>
 
-    <script type="text/javascript" src="noneuclid_files/EuclidMath.js"></script>
-    <script type="text/javascript" src="noneuclid_files/NonEuclid.js"></script>
+    <script type="text/javascript" src="index_files/EuclidMath.js"></script>
+    <script type="text/javascript" src="index_files/NonEuclid.js"></script>
 
 </head>
 
@@ -214,39 +214,23 @@
 
 <table class="noBorder">
     <tbody><tr>
-        <td class="noBorder">
-            <canvas id="canvas" width="700" height="700" style="margin-right: 100px;margin-left: 50px;">
-                If our browser supported the HTML5 canvas and WebGL, there would be a nice animation here :(
-            </canvas><br>
-            <div class="onoffswitch">
-                <input name="onoffswitch" class="onoffswitch-checkbox" id="switchAnimate" checked="checked" type="checkbox">
-                <label class="onoffswitch-label" for="switchAnimate">
-                    <span class="onoffswitch-inner"></span>
-                    <span class="onoffswitch-switch"></span>
 
-                </label> </div>
-
-            <p>
-            </p>
-            
-            <p></p>
-        </td>
-        <td class="noBorder"><div class="box" style="background-color: #90a4c3;">
+        <td class="noBorder"><div class="box" style="background-color: #90a4c3;margin-left: 50px;margin-right: 60px;margin-top: 25px;">
             <select id="menuConstruct" style="background-color: #b9ceed;">
                 <option value="" disabled="disabled" selected="selected"> -- Selecciona herramienta -- </option>
-                <option value="ModeSegment"> &#8260; &nbsp;&nbsp;&nbsp; Segmento de línea</option>
-                <option value="ModeRay">&#8599; &nbsp; Rayo</option>
-                <option value="ModeLine">&#8597; &nbsp;&nbsp; Línea</option>
-                <option value="ModeCircle">&#8857; &nbsp; Círculo</option>
-                <option value="ModePoint">&#10024; &nbsp; Punto libre</option>
-                <option value="ModePointOnObj">&#8888; &nbsp; Punto sobre objeto</option>
-                <option value="ModeIntersect">&#10005; &nbsp; Punto de intersección</option>
+                <option value="ModeSegment"> ⁄ &nbsp;&nbsp;&nbsp; Segmento de línea</option>
+                <option value="ModeRay">↗ &nbsp; Rayo</option>
+                <option value="ModeLine">↕ &nbsp;&nbsp; Línea</option>
+                <option value="ModeCircle">⊙ &nbsp; Círculo</option>
+                <option value="ModePoint">✨ &nbsp; Punto libre</option>
+                <option value="ModePointOnObj">⊸ &nbsp; Punto sobre objeto</option>
+                <option value="ModeIntersect">✕ &nbsp; Punto de intersección</option>
             </select>
             <input id="buttonColorPicker" style="visibility: hidden;" value="#000000" type="color"><br>
             <label id="labelConstructHelp"> </label>
         </div><br>
 
-            <div class="box" style="background-color: #e6bea1;">
+            <div class="box" style="background-color: #e6bea1;margin-left: 50px;margin-right: 60px;">
                <select id="menuMeasure" style="background-color: #ffd7ba;">
                     <option value="" disabled="disabled" selected="selected"> -- Selecciona acción -- </option>
                     <optgroup label="Medidas">
@@ -259,17 +243,17 @@
                         <option value="ModeLabel">Etiquetar</option>
                         <option value="ModeDelete">Borrar objeto</option>
                         <option value="ModeHide">Ocultar objeto</option>
-                        <option value="ModeUnhide" id="menuSelectUnhide">Mostrar todos</option>
+                        <option value="ModeUnhide" id="menuSelectUnhide" disabled="disabled">Mostrar todos</option>
                         <option value="ModeClear">Borrar todo</option>
                     </optgroup>
                 </select> <br>
                 <label id="labelMeasureHelp"> </label><br>
-             Coordenadas polares:<label id="labelCoordinates">(r= &#8722;.&#8722; , &#966;= &#8722;.&#8722;°)</label>
+             Coordenadas polares:<label id="labelCoordinates">(r= −.− , φ= −.−°)</label>
             <br>
-            <label id="labelMeasurements">m&#8736;ATB = 90.0°<br>m&#8736;ATC = 90.0°<br></label>
+            <label id="labelMeasurements"></label>
         </div><br>
 
-            <div class="box">
+            <div class="box" style="margin-left: 50px;margin-right: 60px;">
             <select id="menuGallery">
                 <option value="" disabled="disabled" selected="selected"> -- Seleccionar ejemplo -- </option>
                 <optgroup label="Ejemplos">
@@ -288,30 +272,43 @@
                     <option value="ModeLoadLocal">Cargar...</option>
                 </optgroup>
             </select><br>
-            <b><label id="labelTitle">Altitudes of a Triangle</label></b><br>
-            <label id="labelComments">The accompanying construction 
-shows &#8710;ABC with altitude AT perpendicular to base BC. Notice that m&#8736;ATB 
-and m&#8736;ATC are both 90° (as displayed in the orange "Measurements and 
-Modifications" panel).<br><br><em>Your Tasks</em>:<ol><li> Construct the triangle's other two altitudes.</li><li>
- In Euclidean geometry, the three altitudes of a triangle are coincident
- (they all intersect at a single point). This point is called the 
-orthocenter of the triangle. Either convince yourself that this is also 
-true in hyperbolic geometry or find a counter example.</li><li>In 
-Euclidean geometry, the area of a triangle is given by the equation: 
-A=½bh, where the base, b, is the length of any side of the triangle and 
-the height, h, is the distance along the altitude from the chosen base 
-to  the vertex opposite that base. In hyperbolic geometry, this equation
- results in a contradiction. Find the contradiction and explain it.</li></ol><br> <em>Hint:</em> The following steps were used to construct the altitude AT:<ol><li>Let side BC be the base. Extend segment BC by constructing the line BC.</li><li>Construct
- &#8857;AX (the circle with center at A that passes through X) where X is any 
-point outside the triangle, so that the &#8857;AX intersects line BC in two 
-places.</li><li>Construct the intersection points of &#8857;AX and line BC. 
-Label these intersection points P and Q. Then, hide circle &#8857;AX, and 
-point X.</li><li>Construct &#8857;PQ and &#8857;QP.</li><li>Construct the 
-intersection points of &#8857;PQ and &#8857;QP. Label these intersection points R 
-and S where S is the intersection farther from A.</li><li>Construct the line AS (which will pass through R). Line AS &#8869; BC (why?). Hide &#8857;PQ, &#8857;QP, point P, point Q, and point R.</li><li>Construct
- the intersection of line CB with line AS. Label this intersection point
- T and hide point S. Segment AT is the altitude to side BC of &#8710;ABC.</li></ol></label></div><br>
+            <b><label id="labelTitle">Parallel Lines</label></b><br>
+            <label id="labelComments">Herein lies the crux of hyperbolic geometry.<br>All axioms of Euclidean geometry <b><i>except the parallel axiom</i></b> apply in hyperbolic geometry. The Euclidean geometry parallel axiom states:<q>Given
+ a line, AB, and a point C not on that line, there is one and only one 
+line which contains the point C, and is parallel to AB.</q>By contrast, the parallel axiom in hyperbolic geometry is: <q>Given a line AB and a point C not on that line, there are at least two distinct lines which contain C, and are parallel to AB.</q>When thinking about this, keep in mind the strict geometric definitions:<ul><li><em>Parallel lines</em> are lines in a plane which do not intersect.</li><li>A <em>line</em> is a straight path that has no thickness and is endless in both directions.</li></ul>
+ When looking at the construction, it might seem there are a few 
+problems with calling AB, DC and EC lines: 1) they do not look straight 
+and 2) they do not seem endless. However, when viewing objects in the 
+disk model, keep in mind that: <ol><li>The lines look curved because you
+ are viewing them from outside the model. If you were inside a 
+hyperbolic space, then light traveling from A to B would follow the path
+ drawn from A to B. If you were in the hyperbolic space, the hyperbolic 
+lines would look (and be) straight.</li><li> The edge of the disk is infinitely far from every point within the disk.</li></ol>
+ The overall effect of the nature of parallel lines is that any theorm 
+that can be proved in Euclidean geometry without using the parallel 
+axiom will also be a theorm in hyperbolic geometry. Contrariwise, many 
+Euclidean geometry theorms that depends on the parallel axiom will be 
+false in hyperbolic geometry.</label></div><br>
         </td>
+
+	<td class="noBorder">
+          <canvas id="canvas" width="700" height="700" style="margin-right: 100px;margin-left: 50px;">
+	        El navegador debe soportar Canvas de HTML5.
+            </canvas><br>
+            <div class="onoffswitch">
+                <input name="onoffswitch" class="onoffswitch-checkbox" id="switchAnimate" checked="checked" type="checkbox">
+                <label class="onoffswitch-label" for="switchAnimate">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+
+                </label> </div>
+
+            <p>
+            </p>
+            
+            <p></p>
+	</td>
+		
     </tr>
 </tbody></table>
 
@@ -326,7 +323,7 @@ and S where S is the intersection farther from A.</li><li>Construct the line AS 
 
 <hr>
 <h4>
-                <b> Esta página ha sido construida sobre el software <a href="https://www.cs.unm.edu/~joel/NonEuclid/">NonEuclid</a> de Joel Castellanos. <br> </b>
+                <b> Esta página ha sido construida sobre el software <a href="https://www.cs.unm.edu/%7Ejoel/NonEuclid/">NonEuclid</a> de Joel Castellanos. <br> </b>
                 <b> Authors: <br> </b>
                 <a href="http://cs.unm.edu/%7Ejoel">Joel Castellanos</a>,
                 <a href="http://www.cs.unm.edu/">Dept. of Computer Science,
@@ -347,6 +344,7 @@ and S where S is the intersection farther from A.</li><li>Construct the line AS 
             </h4>
 
 <h4> Copyright©: Joel Castellanos, 1994-2016</h4>
+
 
 
 
