@@ -112,8 +112,8 @@ literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1
 %% Título y otros %%
 \title{Modelo del hiperboloide}                                               % Título
 \subtitle{Y otros modelos para la geometría hiperbólica}                                  % Subtítulo
-\author[Eva Mª González \and David Melero \and Mario Román]{ %
-Eva Mª González \and Margarita Gómez  \and David Melero \and Mario Román \texorpdfstring{\\
+\author[UGR]{ %
+Eva Mª González \and Margarita Gómez  \\ David Melero \and Mario Román \texorpdfstring{\\
 \href{}{}}{}} % Autor y e-mail
 \date{Taller de geometría y topología}                                                            % Fecha
 
@@ -165,6 +165,21 @@ Eva Mª González \and Margarita Gómez  \and David Melero \and Mario Román \te
   \begin{centering}
     \includegraphics[width=0.5\textwidth]{teselahexagonos.png}
   \end{centering}
+\end{frame}
+
+\begin{frame}{Relación con el modelo del hiperboloide}
+  Los puntos del disco de Poincaré están en correspondencia con los puntos del modelo
+  del hiperboloide. La correspondencia se obtiene proyectando desde el punto $(0,0,-1)$.
+
+  \begin{itemize}
+  \item Dado un punto $(x,y,z)$ en el hiperboloide (cumpliendo por tanto $z^2-x^2-y^2 = 1$),
+    su proyección será
+    \[\frac{1}{1+z}(x,y).\]
+    \pause
+  \item Dado un punto $(0,a,b)$ en el disco (cumpliendo por tanto $a^2+b^2 < 1$), su
+    proyección será
+    \[\frac{1}{1-a^2-b^2}\left(1+a^2+b^2,2a,2b\right).\]
+  \end{itemize}
 \end{frame}
 
 \end{document}
