@@ -170,10 +170,11 @@ function init() {
   virtualObj = new HypObject;
   mousePolar = void 0;
   setSize();
-  var a = 'IsoscelesTriangle.csv',
+  var a = 'WhatIsNonEuclid.csv',
   b = Math.random();
   0.125 > b ? a = 'saccheri.csv' : 0.25 > b ? a = 'Circle.csv' : 0.375 >
-  b ? a = 'WhatIsNonEuclid.csv' : 0.5 > b ? a = 'ParallelLines.csv' : 0.625 > b ? a = 'Rhombus.csv' : 0.75 > b ? a = 'Pseudosphere.csv' : 0.875 > b && (a = 'Altitude.csv');
+	b ? a = 'WhatIsNonEuclid.csv' : 0.5 > b ? a = 'ParallelLines.csv' : 0.625 > b ? a = 'Rhombus.csv' : 0.75 > b ? a = 'Pseudosphere.csv' : 0.875 > b && (a = 'Altitude.csv');
+    a = 'WhatIsNonEuclid.csv'
   loadFromServer(a)
 }
 function initPart2(a) {
