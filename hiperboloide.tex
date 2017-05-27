@@ -1,165 +1,298 @@
-% !TEX encoding = IsoLatin
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plantilla b√°sica de Latex en Espa√±ol.
+%
+% Autor: Andr√©s Herrera Poyatos (https://github.com/andreshp)
+%
+% Es una plantilla b√°sica para redactar documentos. Utiliza el paquete fancyhdr para darle un
+% estilo moderno pero serio.
+%
+% La plantilla se encuentra adaptada al espa√±ol.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%-----------------------------------------------------------------------------------------------------
+%	INCLUSI√ìN DE PAQUETES B√ÅSICOS
+%-----------------------------------------------------------------------------------------------------
 
-\documentclass[11pt,twoside]{book}
+\documentclass{article}
 
+% Lenguaje
+\usepackage[spanish,es-noquoting, es-tabla, es-lcroman]{babel}
+\usepackage[utf8]{inputenc}
+\selectlanguage{spanish}
 
-\usepackage[a4paper,margin=3.5cm]{geometry}
+% fuente mono
+\usepackage{fontspec}
+\setmonofont{Inconsolata}
 
-\usepackage[T1]{fontenc}
-\usepackage{fourier}
-
-
-
-\usepackage[protrusion=true,expansion=true]{microtype}
-	
-\usepackage[english,spanish,es-lcroman]{babel}
-
-\usepackage[latin1]{inputenc}
-
-\usepackage{enumerate}
-\renewcommand*\descriptionlabel[1]{\hspace\labelsep\normalfont #1}
-
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{latexsym}
-\usepackage{amsmath}
+% Matem√°ticas
 \usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{mathrsfs}
 \usepackage{amsfonts}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-
-\usepackage{makeidx}
-\makeindex
-
-
-\usepackage{todonotes}
-
-\usepackage{tcolorbox}
-
-\usepackage{mathtools}
-
-\usepackage[chapter]{tocbibind}
-
-\usepackage{setspace}
-\onehalfspacing
-\allowdisplaybreaks
-
-\numberwithin{equation}{section}
-\numberwithin{figure}{section}
-\numberwithin{table}{section}	
-
-\setlength{\parskip}{0.4em}
-\setlength{\headheight}{15pt}
-
-\renewcommand{\labelenumi}{(\roman{enumi})}
-\renewcommand{\labelenumii}{\arabic{enumii})}
-\renewcommand{\labelenumiii}{\alph{enumiii})}
+\usepackage{amsmath}
+\usepackage{tikz-cd}
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}
+\newtheorem{proposition}{Proposici√≥n}
+\newtheorem{lemma}{Lema}
+\newtheorem{corollary}{Corolario}
+\theoremstyle{definition}
+\newtheorem{definition}{Definici√≥n}
+\theoremstyle{remark}
+\newtheorem*{remark}{Nota}
+\renewcommand*{\proofname}{Demostraci√≥n}
 
 \DeclareMathOperator{\Inv}{Inv}
 \DeclareMathOperator{\fr}{Fr}
 \DeclareMathOperator{\rad}{Rad}
 \DeclareMathOperator{\dist}{dist}
 
-%entornos
-\theoremstyle{definition}
-\newtheorem{midef}{DefiniciÛn}[section]
-\newtheorem{miej}[midef]{Ejemplo}
-\newtheorem{miob}[midef]{ObservaciÛn}
-\theoremstyle{plain}
-\newtheorem{miteo}[midef]{Teorema}
-\newtheorem{mil}[midef]{Lema}
-\newtheorem{micol}[midef]{Corolario}
-\newtheorem{miprop}[midef]{ProposiciÛn}
-
-%funciones
 \newcommand{\abs}[1]{\ensuremath\left\vert #1 \right\vert}
 \newcommand{\norm}[1]{\ensuremath\left\Vert #1 \right\Vert}
 \newcommand{\normt}[1]{\ensuremath\left\vert\kern-0.25ex\left\vert\kern-0.25ex\left\vert #1 \right\vert\kern-0.25ex\right\vert\kern-0.25ex\right\vert}
 
-\title{tÌtulo}
-\author{autor}
+% Corrige el espacio previo a las definiciones
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=\parskip \thm@postskip=0pt
+}
+\makeatother
 
-%\usepackage[hidelinks]{hyperref}
+% Fuente
+\usepackage{courier}
+\usepackage{microtype}
 
-\providecommand{\norm}[1]{\lVert#1\rVert}
 
-\title{Preliminares}
-\date{}
+% ----
+% Estilo de p√°gina
+%----
+% Paquetes para el dise√±o de p√°gina:
+\usepackage{fancyhdr}               % Utilizado para hacer t√≠tulos propios.
+\usepackage{lastpage}               % Referencia a la √∫ltima p√°gina. Utilizado para el pie de p√°gina.
+\usepackage{extramarks}             % Marcas extras. Utilizado en pie de p√°gina y cabecera.
+\usepackage[parfill]{parskip}       % Crea una nueva l√≠nea entre p√°rrafos.
+\usepackage{geometry}               % Asigna la "geometr√≠a" de las p√°ginas.
+
+% Se elige el estilo fancy y m√°rgenes de 3 cent√≠metros.
 \pagestyle{fancy}
+\geometry{left=3cm,right=3cm,top=3cm,bottom=3cm,headheight=1cm,headsep=0.5cm} % M√°rgenes y cabecera.
+\fancyhf{}
+
+% Espacios en el documento:
+\linespread{1.1}                        % Espacio entre l√≠neas.
+\setlength\parindent{0pt}               % Selecciona la indentaci√≥n para cada inicio de p√°rrafo.
+
+% Cabecera del documento. Se ajusta la l√≠nea de la cabecera.
+\renewcommand\headrule{
+	\begin{minipage}{1\textwidth}
+	    \hrule width \hsize
+	\end{minipage}
+}
+
+% Texto de la cabecera:
+\lhead{\docauthor}                          % Parte izquierda.
+\chead{}                                    % Centro.
+\rhead{\subject \ - \doctitle}              % Parte derecha.
+
+% Pie de p√°gina del documento. Se ajusta la l√≠nea del pie de p√°gina.
+\renewcommand\footrule{
+\begin{minipage}{1\textwidth}
+    \hrule width \hsize
+\end{minipage}\par
+}
+
+\lfoot{}                                                 % Parte izquierda.
+\cfoot{}                                                 % Centro.
+\rfoot{P√°gina\ \thepage\ de\ \protect\pageref{LastPage}} % Parte derecha.
+
+
+% ----
+% PORTADA
+% ----
+
+% Estilo
+\usepackage{title1}
+
+% T√≠tulo y autores
+\newcommand{\doctitle}{Disco de Poincar√©}
+\newcommand{\docsubtitle}{}
+\newcommand{\docdate}{1 \ de \ Enero \ de \ 2015}
+\newcommand{\subject}{Geometr√≠a hiperb√≥lica}
+\newcommand{\docauthor}{M. G√≥mez, E.M. Gonz√°lez, D. Melero, M. Rom√°n}
+\newcommand{\docaddress}{Universidad de Granada}
+\newcommand{\docemail}{}
+
+% Resumen
+\newcommand{\docabstract}{En la geometr√≠a hiperb√≥lica, el quinto postulado de Euclides es sustituido por el axioma de Lobachevsky.}
 
 \begin{document}
 
-\chapter{IntroducciÛn}
+\maketitle
 
-La geometrÌa hiperbÛlica es un modelo de geometrÌa que satisface sÛlo los cuatro primeros postulados de la geometrÌa euclidiana. Aunque es similar en muchos aspectos y muchos de los teoremas de la geometrÌa euclidiana siguen siendo v·lidos en geometrÌa hiperbÛlica, no se satisface el quinto postulado de Euclides sobre las paralelas. 
+% Profundidad del √çndice
+%\setcounter{tocdepth}{1}
+\newpage
+\tableofcontents
+\newpage
 
-Desde la antigua Grecia se realizaron esfuerzos por deducir el quinto postulado de Euclides referente a las paralelas de los otros cuatro. Uno de los intentos m·s amplios y ambiciosos fue el de Giovanni Gerolamo Saccheri en el siglo XVIII quien, contradictoriamente creÛ lo que podrÌamos considerar modelo incipiente de geometrÌa hiperbÛlica. Sin embargo, Saccheri creyÛ que no era consistente y no llegÛ a formalizar todos los aspectos de su trabajo. TambiÈn Johann Heinrich Lambert encontrÛ algunas fÛrmulas interesantes referentes a lo que hoy llamarÌamos tri·ngulos de la geometrÌa hiperbÛlica, probando que la suma de los ·ngulos es siempre menor que 180∫, la fÛrmula de Lambert establecÌa que para uno de estos tri·ngulos se cumplÌa: $$\pi-\alpha-\beta-\gamma=DA_{\alpha,\beta,\gamma},$$
-donde $\alpha,\beta,\gamma$ son los ·ngulos del tri·ngulo, $A_{\alpha,\beta,\gamma}$ es el ·rea del tri·ngulo y C es una constante de proporcionalidad positiva relacionada con la curvatura del espacio hiperbÛlico donde se haye inmerso el tri·ngulo.
+\section{Introducci√≥n}
 
-M·s adelante Carl Friedrich Gauss trabajÛ en un modelo similar pero no publicÛ sus resultados. En los aÒos 1820 dos jÛvenes matem·ticos que trabajaban de modo independiente, J·nos Bolyai y Nikolai Ivanovich Lobachevsky, publicaron sus modelos por los cuales establecÌan la posibilidad de un tipo de geometrÌa alternativa, totalmente consistente, que es el que conocemos como geometrÌa hiperbÛlica. 
+La geometr√≠a hiperb√≥lica es un modelo de geometr√≠a que satisface s√≥lo
+los cuatro primeros postulados de la geometr√≠a euclidiana. Aunque es
+similar en muchos aspectos y muchos de los teoremas de la geometr√≠a
+euclidiana siguen siendo v√°lidos en geometr√≠a hiperb√≥lica, no se
+satisface el quinto postulado de Euclides sobre las paralelas.
 
-Existen varios modelos de geometrÌa hiperbÛlica: la representaciÛn de Klein, el modelo del disco de PoincarÈ y el modelo de Lorentz o del hiperboloide. 
+Desde la antigua Grecia se realizaron esfuerzos por deducir el quinto
+postulado de Euclides referente a las paralelas de los otros
+cuatro. Uno de los intentos m√°s amplios y ambiciosos fue el de
+Giovanni Gerolamo Saccheri en el siglo XVIII quien,
+contradictoriamente cre√≥ lo que podr√≠amos considerar modelo incipiente
+de geometr√≠a hiperb√≥lica. Sin embargo, Saccheri crey√≥ que no era
+consistente y no lleg√≥ a formalizar todos los aspectos de su
+trabajo. Tambi√©n Johann Heinrich Lambert encontr√≥ algunas f√≥rmulas
+interesantes referentes a lo que hoy llamar√≠amos tri√°ngulos de la
+geometr√≠a hiperb√≥lica, probando que la suma de los √°ngulos es siempre
+menor que 180¬∫, la f√≥rmula de Lambert establec√≠a que para uno de estos
+tri√°ngulos se
+cumpl√≠a: $$\pi-\alpha-\beta-\gamma=DA_{\alpha,\beta,\gamma},$$ donde
+$\alpha,\beta,\gamma$ son los √°ngulos del tri√°ngulo,
+$A_{\alpha,\beta,\gamma}$ es el √°rea del tri√°ngulo y C es una
+constante de proporcionalidad positiva relacionada con la curvatura
+del espacio hiperb√≥lico donde se haye inmerso el tri√°ngulo.
 
-Curiosamente los dos primeros modelos fueron propuestos y publicados originalmente por Eugenio Beltrami en 1968, sin embargo, alcanzaron notoriedad por el uso que tanto Felix Klein como Henri PoincarÈ hicieron de ellos, estos dos modelos son modelos de la geometrÌa hiperbÛlica de dos dimensiones, y son generalizables a m·s dimensiones. 
+M√°s adelante Carl Friedrich Gauss trabaj√≥ en un modelo similar pero no
+public√≥ sus resultados. En los a√±os 1820 dos j√≥venes matem√°ticos que
+trabajaban de modo independiente, J√°nos Bolyai y Nikolai Ivanovich
+Lobachevsky, publicaron sus modelos por los cuales establec√≠an la
+posibilidad de un tipo de geometr√≠a alternativa, totalmente
+consistente, que es el que conocemos como geometr√≠a hiperb√≥lica.
 
-La representaciÛn de Klein, tambiÈn conocido como el modelo proyectivo del disco Û modelo de Beltrami-Klein, usa el interior de un cÌrculo como plano hiperbÛlico, y las cuerdas como lÌneas del cÌrculo. 
+Existen varios modelos de geometr√≠a hiperb√≥lica: la representaci√≥n de
+Klein, el modelo del disco de Poincar√© y el modelo de Lorentz o del
+hiperboloide.
 
-El modelo de PoincarÈ usa tambiÈn el interior de un cÌrculo plano, y en Èl las lÌneas rectas de la geometrÌa hiperbÛlica vienen representadas por arcos de circuferencia que cortan el borde del crÌculo plano en ·ngulo recto.
+Curiosamente los dos primeros modelos fueron propuestos y publicados
+originalmente por Eugenio Beltrami en 1968, sin embargo, alcanzaron
+notoriedad por el uso que tanto Felix Klein como Henri Poincar√©
+hicieron de ellos, estos dos modelos son modelos de la geometr√≠a
+hiperb√≥lica de dos dimensiones, y son generalizables a m√°s
+dimensiones.
 
-\chapter{Modelo del hiperboloide}
+La representaci√≥n de Klein, tambi√©n conocido como el modelo proyectivo
+del disco √≥ modelo de Beltrami-Klein, usa el interior de un c√≠rculo
+como plano hiperb√≥lico, y las cuerdas como l√≠neas del c√≠rculo.
 
-Este modelo de geometrÌa hiperbÛlica se basa en la forma cuadr·tica de Lorentz: $$L(x,y,z)=x^2+y^2-x^2.$$
-Si pensamos en esta forma cuadr·tica como una norma, tenemos vectores distintos de cero con norma cero e incluso norma negativa. Esto nos da una clasificaciÛn de los vectores: \begin{enumerate}
+El modelo de Poincar√© usa tambi√©n el interior de un c√≠rculo plano, y
+en √©l las l√≠neas rectas de la geometr√≠a hiperb√≥lica vienen
+representadas por arcos de circuferencia que cortan el borde del
+cr√≠culo plano en √°ngulo recto.
+
+\section{Modelo del hiperboloide}
+
+Este modelo de geometr√≠a hiperb√≥lica se basa en la forma cuadr√°tica de
+Lorentz: $$L(x,y,z)=x^2+y^2-x^2.$$ Si pensamos en esta forma
+cuadr√°tica como una norma, tenemos vectores distintos de cero con
+norma cero e incluso norma negativa. Esto nos da una clasificaci√≥n de
+los vectores: \begin{enumerate}
 \item{Vectores espaciales:$x\in\mathbb{R}^3$ tal que $L(x)>0$}
 \item{Vectores temporales:$x\in\mathbb{R}^3$ tal que $L(x)<0$}
 \item{Vectores luminosos:$x\in\mathbb{R}^3$ tal que $L(x)=0$}
  \end{enumerate}
 
-Definimos $$\mathbb{H}^2=\{x\in\mathbb{R}^3 | L(x)=-1,x(0,0,1)>0\},$$
-como vemos esta es la hoja superior de un hiperboloide de dos hojas. Como sabemos es una superficie y por tanto localmente homeomorfo a un plano. Lo llamamos plano hiperbÛlico.
+ Definimos $$\mathbb{H}^2=\{x\in\mathbb{R}^3 | L(x)=-1,x(0,0,1)>0\},$$
+ como vemos esta es la hoja superior de un hiperboloide de dos
+ hojas. Como sabemos es una superficie y por tanto localmente
+ homeomorfo a un plano. Lo llamamos plano hiperb√≥lico.
 
-\section{Rectas}
+\subsection{Rectas}
 
-Las rectas en el plano hiperbÛlico se definen como las intersecciones de $\mathbb{H}$ con planos que pasan por el origen. Las llamamos rectas hiperbÛlicas.
+Las rectas en el plano hiperb√≥lico se definen como las intersecciones
+de $\mathbb{H}$ con planos que pasan por el origen. Las llamamos
+rectas hiperb√≥licas.
 
-\chapter{Disco de PoincarÈ}
+\section{Disco de Poincar√©}
 
-\section{MÈtrica en el disco de PoincarÈ}
+\subsection{M√©trica en el disco de Poincar√©}
 
-\subsection{Distancia}
-Si $u,v$ son dos vectores del espacio euclÌdeo $\mathbb{R}^n$,ambos con norma inferior a $1$,  podemos definir un invariante isomÈtrico de la siguiente manera: $$\delta (u,v)=2\frac{\norm{u-v}^2}{(1-\norm{u}^2)(1-\norm{v}^2)} ,$$ donde $\norm{.}$ representa la norma euclÌdea usual. Definimos la funciÛn distancia como: $$d(u,v)=arccosh(1+\delta(u,v)).$$ Esta funciÛn de distancia est· definida para cualesquiera dos vectores de norma inferior a uno, y el conjunto de tales vectores forman un espacio mÈtrico que es un modelo de espacio hipÈrbÛlico de curvatura constante -1, como sabemos el disco de PoincarÈ. \\
-Como bien sabemos la funcion arccosh es creciente, luego cuanto mayor sea $\delta (u,v)$ mayor ser· la distancia que separa $u$ y $v$. Ahora bien, si acercamos uno de los dos vectores $u$ o $v$  hacia la frontera del disco, su norma se acercar· a uno y por tanto la funciÛn $\delta$ crecer· y como consecuencia la funciÛn distancia tambiÈn. Es decir, si tenemos dos vectores,uno suficientemente lejos de la frontera y vamos acercando el otro a la frontera, la distancia entre los dos crecer·. \\
+\subsubsection{Distancia}
+Si $u,v$ son dos vectores del espacio eucl√≠deo $\mathbb{R}^n$,ambos
+con norma inferior a $1$, podemos definir un invariante isom√©trico de
+la siguiente manera:
+$$\delta (u,v)=2\frac{\norm{u-v}^2}{(1-\norm{u}^2)(1-\norm{v}^2)} ,$$
+donde $\norm{.}$ representa la norma eucl√≠dea usual. Definimos la
+funci√≥n distancia como: $$d(u,v)=arccosh(1+\delta(u,v)).$$ Esta
+funci√≥n de distancia est√° definida para cualesquiera dos vectores de
+norma inferior a uno, y el conjunto de tales vectores forman un
+espacio m√©trico que es un modelo de espacio hip√©rb√≥lico de curvatura
+constante -1, como sabemos el disco de Poincar√©.
+
+Como bien sabemos la funcion arccosh es creciente, luego cuanto mayor
+sea $\delta (u,v)$ mayor ser√° la distancia que separa $u$ y $v$. Ahora
+bien, si acercamos uno de los dos vectores $u$ o $v$ hacia la frontera
+del disco, su norma se acercar√° a uno y por tanto la funci√≥n $\delta$
+crecer√° y como consecuencia la funci√≥n distancia tambi√©n. Es decir, si
+tenemos dos vectores,uno suficientemente lejos de la frontera y vamos
+acercando el otro a la frontera, la distancia entre los dos crecer√°.
+
 \newpage
 
-Por ejemplo, en la siguiente imagen todos los puntos est·n a la misma distancia del punto A:
+Por ejemplo, en la siguiente imagen todos los puntos est√°n a la misma
+distancia del punto A:
+
 \begin{figure}[h]
 \includegraphics{Distancias.png}
 \end{figure}
 
-Veamos tambiÈn como serÌa una circunferencia con centro A un punto cercano a la frontera y de radio, por ejemplo, 4:
+Veamos tambi√©n como ser√≠a una circunferencia con centro A un punto
+cercano a la frontera y de radio, por ejemplo, 4:
+
 \begin{figure}[h]
 \includegraphics{Circunferencia.png}
 \end{figure}
 
- \newpage
-\subsection{Rectas}
+\newpage
 
-Dados ahora dos puntos vamos a ver como es la recta que pase por los dos puntos dados. En el modelo del disco de PoincarÈ, las rectas del plano se definen por arcos de circunferencias con ecuaciones de la forma: $$x^2+y^2+ax+by+1=0,$$
+\subsubsection{Rectas}
+
+Dados ahora dos puntos vamos a ver como es la recta que pase por los
+dos puntos dados. En el modelo del disco de Poincar√©, las rectas del
+plano se definen por arcos de circunferencias con ecuaciones de la
+forma: $$x^2+y^2+ax+by+1=0,$$
 que es la forma general de una circunferencia que corta ortogonalmente al disco unidad.\\
-Dados dos puntos u y v en el disco que no estÈn en un di·metro, se puede resolver para el cÌrculo de esta forma pasando por ambos puntos, y obtener
+Dados dos puntos u y v en el disco que no est√©n en un di√°metro, se
+puede resolver para el c√≠rculo de esta forma pasando por ambos puntos,
+y obtener
 $$x^{2}+y^{2}+{\frac {u_{2}(v_{1}^{2}+v_{2}^{2})-v_{2}(u_{1}^{2}+u_{2}^{2})+u_{2}-v_{2}}{u_{1}v_{2}-u_{2}v_{1}}}x+{\frac {v_{1}(u_{1}^{2}+u_{2}^{2})-u_{1}(v_{1}^{2}+v_{2}^{2})+v_{1}-u_{1}}{u_{1}v_{2}-u_{2}v_{1}}}y+1=0.$$
 
-\subsection{¡ngulos}
-Los ·ngulos son euclidianos. Si tenemos dos lÌneas hiperbÛlicas, cada una de ellas es un arco de circunferencia, luego la medida del ·ngulo que se forma entre las dos lÌneas hiperbÛlicas es el ·ngulo que forman las tangentes de las circunferencias en el punto en que Èstas se intersecan.
+\subsubsection{√Ångulos}
+Los √°ngulos son euclidianos. Si tenemos dos l√≠neas hiperb√≥licas, cada
+una de ellas es un arco de circunferencia, luego la medida del √°ngulo
+que se forma entre las dos l√≠neas hiperb√≥licas es el √°ngulo que forman
+las tangentes de las circunferencias en el punto en que √©stas se
+intersecan.
 
-\subsection{RelaciÛn con el modelo del hiperboloide}
-Este modelo se relaciona con el modelo del hiperboloide proyectivamente. Dado un punto $(t, x_1,x_2)$ sobre la hoja superior de un hiperboloide del modelo del hiperboloide, se define un punto del modelo del disco de PoincarÈ, que se puede proyectar sobre el plano t=0,el resultado es el correspondiente punto del disco de PoincarÈ.
-Para las coordenadas cartesianas $(t,x_1,x_2)$ del hiperboloide e $(y_1,y_2)$ del plano, las fÛrmulas de conversiÛn son :
+\subsubsection{Relaci√≥n con el modelo del hiperboloide}
+Este modelo se relaciona con el modelo del hiperboloide
+proyectivamente. Dado un punto $(t, x_1,x_2)$ sobre la hoja superior
+de un hiperboloide del modelo del hiperboloide, se define un punto del
+modelo del disco de Poincar√©, que se puede proyectar sobre el plano
+t=0,el resultado es el correspondiente punto del disco de Poincar√©.
+Para las coordenadas cartesianas $(t,x_1,x_2)$ del hiperboloide e
+$(y_1,y_2)$ del plano, las f√≥rmulas de conversi√≥n son :
 
 $$y_{i}=\frac {x_{i}}{1+t}$$
 $$(t,x_{i})=\frac {(1+\sum {y_{i}^{2}},2y_{i})}{1-\sum {y_{i}^{2}}}$$
+
+
+\section{Referencias}
+\begin{thebibliography}{9}
+
+\bibitem{gelfand63}
+  Gelfand, I.M.; Minlos, R.A.; Shapiro, Z.Ya. (1963),
+  Representations of the Rotation and Lorentz Groups and their Applications,
+  New York: Pergamon Press.
+
+
+\end{thebibliography}
 
 \end{document}
