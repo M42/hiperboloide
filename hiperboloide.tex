@@ -37,6 +37,7 @@
 \newtheorem{corollary}{Corolario}
 \theoremstyle{definition}
 \newtheorem{definition}{Definición}
+\newtheorem*{axiom}{Axioma}
 \theoremstyle{remark}
 \newtheorem*{remark}{Nota}
 \renewcommand*{\proofname}{Demostración}
@@ -136,56 +137,84 @@
 
 \section{Introducción}
 
-La geometría hiperbólica es un modelo de geometría que satisface sólo
-los cuatro primeros postulados de la geometría euclidiana. Aunque es
-similar en muchos aspectos y muchos de los teoremas de la geometría
-euclidiana siguen siendo válidos en geometría hiperbólica, no se
-satisface el quinto postulado de Euclides sobre las paralelas.
+La \textbf{geometría hiperbólica} es el modelo axiomático que se
+obtiene al aceptar los cuatro primeros postulados de la geometría
+euclídea y sustituir el quinto postulado, por el postulado de
+Lobachevsky. A pesar de este cambio, algunos aspectos y teoremas
+de la geometría euclídea que sean independientes del quinto postulado
+seguirán siendo válidos.
 
-Desde la antigua Grecia se realizaron esfuerzos por deducir el quinto
-postulado de Euclides referente a las paralelas de los otros
-cuatro. Uno de los intentos más amplios y ambiciosos fue el de
-Giovanni Gerolamo Saccheri en el siglo XVIII quien,
-contradictoriamente creó lo que podríamos considerar modelo incipiente
-de geometría hiperbólica. Sin embargo, Saccheri creyó que no era
-consistente y no llegó a formalizar todos los aspectos de su
-trabajo. También Johann Heinrich Lambert encontró algunas fórmulas
-interesantes referentes a lo que hoy llamaríamos triángulos de la
-geometría hiperbólica, probando que la suma de los ángulos es siempre
-menor que 180º, la fórmula de Lambert establecía que para uno de estos
-triángulos se
-cumplía: $$\pi-\alpha-\beta-\gamma=DA_{\alpha,\beta,\gamma},$$ donde
-$\alpha,\beta,\gamma$ son los ángulos del triángulo,
-$A_{\alpha,\beta,\gamma}$ es el área del triángulo y C es una
-constante de proporcionalidad positiva relacionada con la curvatura
-del espacio hiperbólico donde se haye inmerso el triángulo.
+Históricamente, se han realizado esfuerzos por deducir el quinto
+postulado de Euclides de los otros cuatro. \textit{Giovanni Gerolamo
+  Saccheri} intentó, en el siglo XVIII probarlo por reducción al
+absurdo y creó en el proceso un modelo incipiente de geometría
+hiperbólica que nunca llegó a formalizar en su creencia de que sería
+inconsistente. Por otro lado, \textit{Johann Heinrich Lambert} estudió
+lo que constituirían los triángulos de la geometría hiperbólica probando
+que sus ángulos sumaban siempre menos que 180º. En particular demostró
+la fórmula de Lambert para el defecto de un triángulo $T$ de ángulos
+$\alpha,\beta,\gamma$ como
 
-Más adelante Carl Friedrich Gauss trabajó en un modelo similar pero no
-publicó sus resultados. En los años 1820 dos jóvenes matemáticos que
-trabajaban de modo independiente, János Bolyai y Nikolai Ivanovich
-Lobachevsky, publicaron sus modelos por los cuales establecían la
-posibilidad de un tipo de geometría alternativa, totalmente
-consistente, que es el que conocemos como geometría hiperbólica.
+\[
+  \pi - \alpha- \beta - g = \mathrm{área}(T)k
+\]
 
-Existen varios modelos de geometría hiperbólica: la representación de
-Klein, el modelo del disco de Poincaré y el modelo de Lorentz o del
-hiperboloide.
+siendo $k$ una constante de proporcionalidad que estaría relacionada
+con la curvatura del espacio hiperbólico. Más adelante Carl Friedrich
+Gauss trabajaría en un modelo similar sin publicar resultados.
 
-Curiosamente los dos primeros modelos fueron propuestos y publicados
-originalmente por Eugenio Beltrami en 1968, sin embargo, alcanzaron
-notoriedad por el uso que tanto Felix Klein como Henri Poincaré
-hicieron de ellos, estos dos modelos son modelos de la geometría
-hiperbólica de dos dimensiones, y son generalizables a más
-dimensiones.
+La geometría hiperbólica que conocemos hoy surge en los años 1820
+gracias al trabajo independiente de \textit{János Bolyai} y
+\textit{Nikolai Ivanovich Lobachevsky}, que publicaron modelos que
+posibilitaban una geometría completamente consistente y sin el quinto
+postulado. El axioma de Lobachevsky, unido a los cuatro postulados
+anteriores, define la geometría hiperbólica.
 
-La representación de Klein, también conocido como el modelo proyectivo
-del disco ó modelo de Beltrami-Klein, usa el interior de un círculo
-como plano hiperbólico, y las cuerdas como líneas del círculo.
+\begin{axiom}[Axioma de Lobachevsky]
+  Dada una recta R y un punto P fuera de R, en el plano conteniendo a
+  la línea R y al punto P existen al menos dos líneas distintas que pasan
+  por P y no intersecan a R.
+\end{axiom}
 
-El modelo de Poincaré usa también el interior de un círculo plano, y
-en él las líneas rectas de la geometría hiperbólica vienen
-representadas por arcos de circuferencia que cortan el borde del
-crículo plano en ángulo recto.
+
+\section{Modelos de la geometría hiperbólica}
+\begin{definition}
+  Un \textbf{modelo} para un sistema se define sustituyendo los
+  términos indefinidos del sistema de axiomas por objetos específicos
+  que los cumplen.
+\end{definition}
+
+Por ejemplo, un modelo de la geometría euclídea es el que asigna a
+cada punto un par de reales $(a,b)$ y a cada recta el conjunto de
+puntos que satisfacen una ecuación lineal $as+bt+u = 0$ para algunos
+reales tales que al menos uno de ellos no sea $0$. Existen varios
+modelos de geometría hiperbólica:
+
+\begin{itemize}
+  
+\item la \textbf{representación de Klein}, también conocida como el
+  \textit{modelo proyectivo del disco} o \textit{modelo de
+    Beltrami-Klein}, toma como puntos a los puntos interiores de
+  un círculo en el plano euclídeo y como rectas a las cuerdaas del
+  círculo.
+  
+\item el \textbf{modelo del disco de Poincaré}, usa también el
+  interior de un círculo plano unidad como espacio de puntos,
+  pero toma como rectas los arcos de circunferencia que cortan el
+  borde del círculo plano de forma ortogonal.
+  
+\item el \textbf{modelo del hiperboloide} o \textit{de Lorentz} usa
+  como espacio de puntos una hoja de un hiperboloide de dos hojas
+  y como rectas los cortes de este con los hiperplanos del espacio
+  de Minkowski en el que se embebe el hiperboloide.
+  
+\end{itemize}
+
+Aunque los dos primeros fueron publicados por \textit{Eugenio
+  Beltrami} en 1968, se hicieron conocidos por el uso que les
+darían \textit{Felix Klein} y \textit{Henri Poincaré}. Ambos
+son modelos que estudiaremos en su caso bidimensional pero
+generalizables a más dimensiones.
 
 \section{Modelo del hiperboloide}
 
