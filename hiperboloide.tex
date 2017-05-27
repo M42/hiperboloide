@@ -20,6 +20,7 @@
 \usepackage[spanish,es-noquoting, es-tabla, es-lcroman]{babel}
 \usepackage[utf8]{inputenc}
 \selectlanguage{spanish}
+\usepackage[colorlinks]{hyperref}
 
 % fuente mono
 \usepackage{fontspec}
@@ -399,7 +400,7 @@ sobre las rectas de un haz de ultraparalelas.\cite{coxeter}
 \subsection{Polígonos}
 \begin{theorem}
   Los ángulos constructibles en el plano euclídeo son exactamente los ángulos
-  constructibles en el plano hiperbólico. \ref{jagy95}
+  constructibles en el plano hiperbólico. \cite{jagy95}
 \end{theorem}
 
 En particular, podemos construir un hexágono regular en el plano
@@ -428,6 +429,38 @@ Nótese que todos ellos son \textit{congruentes}.
 
 
 % https://www.rose-hulman.edu/mathjournal/archives/2014/vol15-n1/paper2/v15n1-2pd.pdf
+
+\section{Construcciones interactivas}
+Enumeramos a continuación varias implementaciones de construcciones interactivas
+con regla y compás hiperbólicos en un disco de Poincaré.
+
+\subsection{NonEuclid}
+\textbf{NonEuclid} es una aplicación ligera permitiendo construcciones
+con regla y compás en un disco de Poincaré e interactividad con las
+construcciones, además de soporte simple para animaciones. La versión
+original fue escrita en Java en 1994 por Joel Castellanos, pero en
+2016 se implementó una versión en Javascript que puede ejecutarse
+desde el navegador usando HTML5. El código de ambas es abierto (si
+bien no consta de licencias de software libre), y puede obtenerse en
+la página web de
+\href{https://www.cs.unm.edu/~joel/NonEuclid/NonEuclid.html}{NonEuclid}.
+
+Para este trabajo hemos alojado una instancia de NonEuclid en la
+página que indica \href{https://m42.github.io/hiperboloide/}{este
+  enlace} y hemos aportado construcciones nuevas a las originalmente
+seleccionables por la aplicación.
+
+\subsection{Geogebra}
+\textbf{Geogebra} no soporta directamente las construcciones en geometría
+hiperbólica, pero la comunidad aporta hojas de trabajo particulares en las
+que están presentes herramientas de construcción para varios modelos del
+plano huperbólico en licencia Creative Commons. Un ejemplo es
+\href{https://www.geogebra.org/material/show/id/2028857}{esta construcción}
+de Francis W. Lipinski, sobre la que hemos realizado construcciones menores.
+
+\subsection{Cinderella}
+\textbf{Cinderella} es software propietario escrito en Java que soporta geometrías
+euclídea, esférica e hiperbólica.
 
 \section{Referencias}
 \begin{thebibliography}{9}
