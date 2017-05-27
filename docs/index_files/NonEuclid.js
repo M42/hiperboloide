@@ -600,7 +600,7 @@ function menuMeasureChange(a) {
 function menuGalleryChange() {
     clearSelection();
     var a = menuGallery.value;
-    'What is Non-Euclidean Geometry?' === a ? loadFromServer('WhatIsNonEuclid.csv')  : 'pitagoras' === a ? loadFromServer('pitagoras.csv')  : 'Isosceles Triangle' === a ? loadFromServer('IsoscelesTriangle.csv')  : 'Altitudes' === a ? loadFromServer('Altitude.csv')  : 'Area' === a ? loadFromServer('Area.csv')  : 'Pseudosphere' === a ? loadFromServer('Pseudosphere.csv')  : 'Parallel Lines' === a ? loadFromServer('ParallelLines.csv')  : 'Rhombus' === a ? loadFromServer('Rhombus.csv')  : 'Saccheri' ===
+    'What is Non-Euclidean Geometry?' === a ? loadFromServer('WhatIsNonEuclid.csv')  : 'pitagoras' === a ? loadFromServer('pitagoras.csv')  : 'Isosceles Triangle' === a ? loadFromServer('IsoscelesTriangle.csv')  : 'distancias' === a ? loadFromServer('distancias.csv')  : 'Area' === a ? loadFromServer('Area.csv')  : 'Pseudosphere' === a ? loadFromServer('Pseudosphere.csv')  : 'Parallel Lines' === a ? loadFromServer('ParallelLines.csv')  : 'Rhombus' === a ? loadFromServer('Rhombus.csv')  : 'Saccheri' ===
 	a ? loadFromServer('saccheri.csv')  : 'ModeLoadLocal' === a ? showFileOpenDialog()  : 'ModeSave' === a && saveConstruction()
 }
 
