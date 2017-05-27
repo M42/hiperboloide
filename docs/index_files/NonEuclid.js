@@ -133,51 +133,48 @@ function HypObject(a, b, c, d) {
   updateObject(this)
 }
 window.onload = init;
+
 function init() {
-  initializationDone = !1;
-  canvas = document.getElementById('canvas');
-  ctx = canvas.getContext('2d');
-  cursorStr = 'default';
-  document.body.style.cursor = cursorStr;
-  fontSize = 14;
-  textNormal = '14px Arial';
-  textBold = 'bold 14px Arial';
-  ctx.font = textNormal;
-  ctx.textAlign = 'center';
-  selectLabelThreshold = fontSize / 2 * (fontSize / 2);
-  animateMinCircleRadius = 0.05;
-  canvas.onmousedown = mouseDown;
-  canvas.onmouseup = mouseUp;
-  canvas.onmousemove = mouseMove;
-  document.onkeydown = keyDown;
-  labelCoordinates = document.getElementById('labelCoordinates');
-  labelConstructHelp = document.getElementById('labelConstructHelp');
-  labelMeasureHelp = document.getElementById('labelMeasureHelp');
-  menuConstruct = document.getElementById('menuConstruct');
-  menuMeasure = document.getElementById('menuMeasure');
-  menuGallery = document.getElementById('menuGallery');
-  labelMeasurements = document.getElementById('labelMeasurements');
-  labelTitle = document.getElementById('labelTitle');
-  labelComments = document.getElementById('labelComments');
-  dialogOpenFile = document.getElementById('openFileDialog');
-  menuSelectUnhide = document.getElementById('menuSelectUnhide');
-  switchAnimate = document.getElementById('switchAnimate');
-  switchAnimate.checked = !0;
-  switchAnimate.onclick = function () {
-    toggleAnimate()
-  };
-  buttonColorPicker = document.getElementById('buttonColorPicker');
-  dialogOpenFile.addEventListener('change', loadLocalFile, !1);
-  virtualPoint = new Point;
-  virtualObj = new HypObject;
-  mousePolar = void 0;
-  setSize();
-  var a = 'WhatIsNonEuclid.csv',
-  b = Math.random();
-  0.125 > b ? a = 'saccheri.csv' : 0.25 > b ? a = 'Circle.csv' : 0.375 >
-	b ? a = 'WhatIsNonEuclid.csv' : 0.5 > b ? a = 'ParallelLines.csv' : 0.625 > b ? a = 'Rhombus.csv' : 0.75 > b ? a = 'Pseudosphere.csv' : 0.875 > b && (a = 'Altitude.csv');
-    a = 'WhatIsNonEuclid.csv'
-  loadFromServer(a)
+    initializationDone = !1;
+    canvas = document.getElementById('canvas');
+    ctx = canvas.getContext('2d');
+    cursorStr = 'default';
+    document.body.style.cursor = cursorStr;
+    fontSize = 14;
+    textNormal = '14px Arial';
+    textBold = 'bold 14px Arial';
+    ctx.font = textNormal;
+    ctx.textAlign = 'center';
+    selectLabelThreshold = fontSize / 2 * (fontSize / 2);
+    animateMinCircleRadius = 0.05;
+    canvas.onmousedown = mouseDown;
+    canvas.onmouseup = mouseUp;
+    canvas.onmousemove = mouseMove;
+    document.onkeydown = keyDown;
+    labelCoordinates = document.getElementById('labelCoordinates');
+    labelConstructHelp = document.getElementById('labelConstructHelp');
+    labelMeasureHelp = document.getElementById('labelMeasureHelp');
+    menuConstruct = document.getElementById('menuConstruct');
+    menuMeasure = document.getElementById('menuMeasure');
+    menuGallery = document.getElementById('menuGallery');
+    labelMeasurements = document.getElementById('labelMeasurements');
+    labelTitle = document.getElementById('labelTitle');
+    labelComments = document.getElementById('labelComments');
+    dialogOpenFile = document.getElementById('openFileDialog');
+    menuSelectUnhide = document.getElementById('menuSelectUnhide');
+    switchAnimate = document.getElementById('switchAnimate');
+    switchAnimate.checked = !0;
+    switchAnimate.onclick = function () {
+	toggleAnimate()
+    };
+    buttonColorPicker = document.getElementById('buttonColorPicker');
+    dialogOpenFile.addEventListener('change', loadLocalFile, !1);
+    virtualPoint = new Point;
+    virtualObj = new HypObject;
+    mousePolar = void 0;
+    setSize();
+    var a = 'WhatIsNonEuclid.csv';
+    loadFromServer('WhatIsNonEuclid.csv')
 }
 function initPart2(a) {
   menuConstruct.onchange = menuConstructChange;
