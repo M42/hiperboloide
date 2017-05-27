@@ -173,8 +173,8 @@ function init() {
     virtualObj = new HypObject;
     mousePolar = void 0;
     setSize();
-    var a = 'WhatIsNonEuclid.csv';
-    loadFromServer('WhatIsNonEuclid.csv')
+    var a = 'poincare.csv';
+    loadFromServer('poincare.csv')
 }
 function initPart2(a) {
   menuConstruct.onchange = menuConstructChange;
