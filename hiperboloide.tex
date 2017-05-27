@@ -216,79 +216,87 @@ darían \textit{Felix Klein} y \textit{Henri Poincaré}. Ambos
 son modelos que estudiaremos en su caso bidimensional pero
 generalizables a más dimensiones.
 
-\section{Modelo del hiperboloide}
+\subsection{Modelo del hiperboloide}
 
-Este modelo de geometría hiperbólica se basa en la forma cuadrática de
-Lorentz: $$L(x,y,z)=x^2+y^2-x^2.$$ Si pensamos en esta forma
-cuadrática como una norma, tenemos vectores distintos de cero con
-norma cero e incluso norma negativa. Esto nos da una clasificación de
-los vectores: \begin{enumerate}
-\item{Vectores espaciales:$x\in\mathbb{R}^3$ tal que $L(x)>0$}
-\item{Vectores temporales:$x\in\mathbb{R}^3$ tal que $L(x)<0$}
-\item{Vectores luminosos:$x\in\mathbb{R}^3$ tal que $L(x)=0$}
- \end{enumerate}
+El \textbf{modelo del hiperboloide} de la geometría hiperbólica se
+basa en la forma cuadrática de Lorentz,
+\[L(x,y,z)=x^2+y^2-z^2.\]
 
- Definimos $$\mathbb{H}^2=\{x\in\mathbb{R}^3 | L(x)=-1,x(0,0,1)>0\},$$
- como vemos esta es la hoja superior de un hiperboloide de dos
- hojas. Como sabemos es una superficie y por tanto localmente
- homeomorfo a un plano. Lo llamamos plano hiperbólico.
+Si pensamos en esta forma cuadrática como una norma, tendremos vectores
+distintos de cero con norma cero e incluso norma negativa. Esto nos da
+una clasificación de los vectores en
 
-\subsection{Rectas}
+\begin{enumerate}
+\item vectores espaciales, $x\in\mathbb{R}^3$ tales que $L(x)>0$;
+\item vectores temporales, $x\in\mathbb{R}^3$ tales que $L(x)<0$; y
+\item vectores luminosos, $x\in\mathbb{R}^3$ tales que $L(x)=0$.
+\end{enumerate}
 
-Las rectas en el plano hiperbólico se definen como las intersecciones
-de $\mathbb{H}$ con planos que pasan por el origen. Las llamamos
-rectas hiperbólicas.
+Con esta norma definimos
+\[\mathbb{H}^2=\{(x,y,z)\in\mathbb{R}^3 \mid L(x,y,z)=-1,\; (x,y,z) \cdot (0,0,1) > 0 \};\]
+y como vemos, esta es la hoja superior de un hiperboloide de dos
+hojas. Sabemos que es una superficie y por tanto localmente
+homeomorfo a un plano, por lo que lo llamaremos \textit{plano hiperbólico}.
 
-\section{Disco de Poincaré}
+\begin{itemize}
+\item Los puntos en $\mathbb{H}$ serán los puntos de nuestro modelo
+  de la geometría hiperbólica.
+\item Las rectas en el plano hiperbólico se definen como las intersecciones
+  de $\mathbb{H}$ con planos que pasan por el origen. Las llamaremos
+  \textit{rectas hiperbólicas}.
+\end{itemize}
 
-\subsection{Métrica en el disco de Poincaré}
 
-\subsubsection{Distancia}
+
+\subsection{Disco de Poincaré}
+
+\subsubsection{Métrica en el disco de Poincaré}
 Si $u,v$ son dos vectores del espacio euclídeo $\mathbb{R}^n$,ambos
 con norma inferior a $1$, podemos definir un invariante isométrico de
 la siguiente manera:
-$$\delta (u,v)=2\frac{\norm{u-v}^2}{(1-\norm{u}^2)(1-\norm{v}^2)} ,$$
+\[\delta (u,v)=2\frac{\norm{u-v}^2}{(1-\norm{u}^2)(1-\norm{v}^2)},\]
+
 donde $\norm{.}$ representa la norma euclídea usual. Definimos la
-función distancia como: $$d(u,v)=arccosh(1+\delta(u,v)).$$ Esta
-función de distancia está definida para cualesquiera dos vectores de
-norma inferior a uno, y el conjunto de tales vectores forman un
-espacio métrico que es un modelo de espacio hipérbólico de curvatura
-constante -1, como sabemos el disco de Poincaré.
+función distancia como:
+\[d(u,v)=arccosh(1+\delta(u,v)).\]
 
-Como bien sabemos la funcion arccosh es creciente, luego cuanto mayor
-sea $\delta (u,v)$ mayor será la distancia que separa $u$ y $v$. Ahora
+Esta función de distancia está definida para cualesquiera dos vectores
+de norma inferior a uno, y el conjunto de tales vectores forman un
+espacio métrico que es un modelo de espacio hiperbólico de curvatura
+constante $-1$, como sabemos el disco de Poincaré.
+
+La función $\operatorname{arccosh}$ es creciente, luego cuanto mayor
+sea $\delta(u,v)$, mayor será la distancia que separa $u$ y $v$. Ahora
 bien, si acercamos uno de los dos vectores $u$ o $v$ hacia la frontera
-del disco, su norma se acercará a uno y por tanto la función $\delta$
-crecerá y como consecuencia la función distancia también. Es decir, si
-tenemos dos vectores,uno suficientemente lejos de la frontera y vamos
-acercando el otro a la frontera, la distancia entre los dos crecerá.
-
-\newpage
+del disco, su norma se acercará a uno, la función $\delta$ crecerá, y
+como consecuencia la función distancia también. Es decir, si tenemos
+dos vectores, uno suficientemente lejos de la frontera y vamos
+acercando el otro a la frontera, la distancia entre ambos crecerá.
 
 Por ejemplo, en la siguiente imagen todos los puntos están a la misma
-distancia del punto A:
+distancia del punto $A$:
 
 \begin{figure}[h]
 \includegraphics{Distancias.png}
 \end{figure}
 
-Veamos también como sería una circunferencia con centro A un punto
+Veamos también como sería una circunferencia con centro $A$ un punto
 cercano a la frontera y de radio, por ejemplo, 4:
 
 \begin{figure}[h]
 \includegraphics{Circunferencia.png}
 \end{figure}
 
-\newpage
 
 \subsubsection{Rectas}
 
 Dados ahora dos puntos vamos a ver como es la recta que pase por los
 dos puntos dados. En el modelo del disco de Poincaré, las rectas del
 plano se definen por arcos de circunferencias con ecuaciones de la
-forma: $$x^2+y^2+ax+by+1=0,$$
+forma
+\[x^2+y^2+ax+by+1=0,\]
 que es la forma general de una circunferencia que corta ortogonalmente al disco unidad.\\
-Dados dos puntos u y v en el disco que no estén en un diámetro, se
+Dados dos puntos $u$ y $v$ en el disco que no estén en un diámetro, se
 puede resolver para el círculo de esta forma pasando por ambos puntos,
 y obtener
 $$x^{2}+y^{2}+{\frac {u_{2}(v_{1}^{2}+v_{2}^{2})-v_{2}(u_{1}^{2}+u_{2}^{2})+u_{2}-v_{2}}{u_{1}v_{2}-u_{2}v_{1}}}x+{\frac {v_{1}(u_{1}^{2}+u_{2}^{2})-u_{1}(v_{1}^{2}+v_{2}^{2})+v_{1}-u_{1}}{u_{1}v_{2}-u_{2}v_{1}}}y+1=0.$$
@@ -316,12 +324,16 @@ $$(t,x_{i})=\frac {(1+\sum {y_{i}^{2}},2y_{i})}{1-\sum {y_{i}^{2}}}$$
 \section{Referencias}
 \begin{thebibliography}{9}
 
-\bibitem{gelfand63}
-  Gelfand, I.M.; Minlos, R.A.; Shapiro, Z.Ya. (1963),
-  Representations of the Rotation and Lorentz Groups and their Applications,
-  New York: Pergamon Press.
+\bibitem{cederberg89}
+  Judith N. Cederberg (1989-2001),
+  A Course in Modern Geometries,
+  New York: Springer Science and Business Media.
 
-
+\bibitem{singer98}
+  David A. Singer (1998),
+  Geometry: Plane and Fancy,
+  New York: Springer Science and Business Media.
+  
 \end{thebibliography}
 
 \end{document}
