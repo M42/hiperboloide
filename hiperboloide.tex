@@ -244,84 +244,13 @@ hojas. Sabemos que es una superficie y por tanto localmente
 homeomorfo a un plano, por lo que lo llamaremos \textit{plano hiperbólico}.
 
 \begin{itemize}
-\item Los puntos en $\mathbb{H}$ serán los puntos de nuestro modelo
+\item Los \textbf{puntos} en $\mathbb{H}$ serán los puntos de nuestro modelo
   de la geometría hiperbólica.
-\item Las rectas en el plano hiperbólico se definen como las intersecciones
+\item Las \textbf{rectas} en el plano hiperbólico se definen como las intersecciones
   de $\mathbb{H}$ con planos que pasan por el origen. Las llamaremos
   \textit{rectas hiperbólicas}.
 \end{itemize}
 
-
-\subsection{Disco de Beltrami-Klein}
-
-\begin{definition}
-  El \textbf{modelo de Beltrami-Klein} interpreta como puntos los puntos
-  del interior de un disco unidad y como líneas las cuerdas del círculo
-  abiertas, en el sentido de que no se consideran en ella los puntos de
-  la frontera del círculo.
-\end{definition}
-
-Veremos que el disco de Beltrami-Klein, al contrario que el disco de
-Poincaré, no es \textbf{conforme}, es decir, los ángulos en el modelo
-no se corresponden con los ángulos hiperbólicos.
-
-\subsubsection{Métricas de Cayley-Kelvin}
-\begin{definition}
-  Fijada una cuádrica $Q$ definimos la \textbf{distancia de Cayley-Kelvin}
-  entre dos puntos como el logaritmo de una razón doble
-
-  \[
-    \mathrm{dist}(p,q) = C\log\frac{|qa||bp|}{|pa||bq|},
-  \]
-
-  donde $a$ y $b$ son los puntos en los que la recta que pasa por $p$
-  y $q$ corta a $Q$. La $C$ es una constante arbitraria.
-\end{definition}
-
-La métrica que usamos en nuestro caso en el disco de Beltrami-Klein es
-un caso particular de una métrica de Cayley-Kelvin cuando la cuádrica
-es el círculo. La distancia se define entonces como
-
-\[
-  \mathrm{dist}(p,q) = \frac{1}{2}\log\frac{|qa||bp|}{|pa||bq|},
-\]
-
-donde $a,b$ son los puntos en los que la recta entre $p$ y $q$ corta
-al borde del disco unidad.
-
-\begin{figure}[ht!]
-  \centering
-  \includegraphics[width=60mm]{./kleinmodelcircles.png}
-  \caption{Círculos en el disco de Klein. \textit{Wikimedia Commons}\label{kleincircles}}
-\end{figure}
-
-En la figura \ref{kleincircles} podemos observar cómo las circunferencias
-en el disco de Klein se dibujan como elipses una vez se acercan al borde.
-Esto es debido a la no-conformidad del modelo.
-
-\begin{theorem}
-  Si desde el origen hasta un punto hay una distancia euclídea de $r$
-  en la bola, la distancia hiperbólica entre ambos es
-  \[
-    \mathrm{dist}(o,p) = \frac{1}{2} \log\left(\frac{1+r}{1-r}\right) = \mathrm{artanh}(r),
-  \]
-  donde $\mathrm{artanh}$ es el arcotangente hiperbólico.
-\end{theorem}
-
-\subsubsection{Comparación con Poincaré}
-El modelo del disco de Klein preserva las líneas rectas como segmentos
-de recta dentro del disco, pero no es conforme; el disco de Poincaré,
-por otro lado, sí preserva los ángulos y es conforme, pero, como ya se
-ha mencionado, las rectas se convierten en segmentos de circunferencias
-ortogonales al disco. En la figura \ref{kleinpoincare} puede observarse
-la comparación entre ambos.
-
-\begin{figure}[ht!]
-  \centering
-  \includegraphics[width=30mm]{./klein37.png}
-  \includegraphics[width=30mm]{./poincare37.png}
-  \caption{Comparación Klein-Poincaré. \textit{Wikimedia Commons} \label{kleinpoincare}}
-\end{figure}
 
 
 \subsection{Disco de Poincaré}
@@ -398,6 +327,79 @@ $(y_1,y_2)$ del plano, tenemos las fórmulas de conversión
   \qquad
   (t,x_{i})=\frac {(1+\sum {y_{i}^{2}},2y_{i})}{1-\sum {y_{i}^{2}}}.
 \]
+
+
+\subsection{Disco de Beltrami-Klein}
+
+\begin{definition}
+  El \textbf{modelo de Beltrami-Klein} interpreta como puntos los puntos
+  del interior de un disco unidad y como líneas las cuerdas del círculo
+  abiertas, en el sentido de que no se consideran en ella los puntos de
+  la frontera del círculo.
+\end{definition}
+
+Veremos que el disco de Beltrami-Klein, al contrario que el disco de
+Poincaré, no es \textbf{conforme}, es decir, los ángulos en el modelo
+no se corresponden con los ángulos hiperbólicos.
+
+\subsubsection{Métricas de Cayley-Kelvin}
+\begin{definition}
+  Fijada una cuádrica $Q$ definimos la \textbf{distancia de Cayley-Kelvin}
+  entre dos puntos como el logaritmo de una razón doble
+
+  \[
+    \mathrm{dist}(p,q) = C\log\frac{|qa||bp|}{|pa||bq|},
+  \]
+
+  donde $a$ y $b$ son los puntos en los que la recta que pasa por $p$
+  y $q$ corta a $Q$. La $C$ es una constante arbitraria.
+\end{definition}
+
+La métrica que usamos en nuestro caso en el disco de Beltrami-Klein es
+un caso particular de una métrica de Cayley-Kelvin cuando la cuádrica
+es el círculo. La distancia se define entonces como
+
+\[
+  \mathrm{dist}(p,q) = \frac{1}{2}\log\frac{|qa||bp|}{|pa||bq|},
+\]
+
+donde $a,b$ son los puntos en los que la recta entre $p$ y $q$ corta
+al borde del disco unidad.
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=60mm]{./kleinmodelcircles.png}
+  \caption{Círculos en el disco de Klein. \textit{Wikimedia Commons}\label{kleincircles}}
+\end{figure}
+
+En la figura \ref{kleincircles} podemos observar cómo las circunferencias
+en el disco de Klein se dibujan como elipses una vez se acercan al borde.
+Esto es debido a la no-conformidad del modelo.
+
+\begin{theorem}
+  Si desde el origen hasta un punto hay una distancia euclídea de $r$
+  en la bola, la distancia hiperbólica entre ambos es
+  \[
+    \mathrm{dist}(o,p) = \frac{1}{2} \log\left(\frac{1+r}{1-r}\right) = \mathrm{artanh}(r),
+  \]
+  donde $\mathrm{artanh}$ es el arcotangente hiperbólico.
+\end{theorem}
+
+\subsubsection{Comparación con Poincaré}
+El modelo del disco de Klein preserva las líneas rectas como segmentos
+de recta dentro del disco, pero no es conforme; el disco de Poincaré,
+por otro lado, sí preserva los ángulos y es conforme, pero, como ya se
+ha mencionado, las rectas se convierten en segmentos de circunferencias
+ortogonales al disco. En la figura \ref{kleinpoincare} puede observarse
+la comparación entre ambos.
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=30mm]{./klein37.png}
+  \includegraphics[width=30mm]{./poincare37.png}
+  \caption{Comparación Klein-Poincaré. \textit{Wikimedia Commons} \label{kleinpoincare}}
+\end{figure}
+
 
 
 \section{Construcciones en el espacio hiperbólico}
