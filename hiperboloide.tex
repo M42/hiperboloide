@@ -507,6 +507,14 @@ todos sus ángulos rectos
 \subsection{Teselaciones}
 \subsubsection{Teselaciones regulares}
 \begin{definition}
+  Una \textbf{teselación} es un recubrimiento de una superficie con
+  polígonos iguales, sin dejar huecos ni cortarse. El polígono central
+  de la teselación recibe el nombre de \textbf{región fundamental}, ya que de
+  este se obtiene, por medio de inversiones respecto a sus lados, toda
+  la teselación.
+\end{definition}
+
+\begin{definition}
   El \textbf{símbolo de Schläfli} es una notación usada para definir
   teselaciones y polítopos regulares. En nuestro caso la usaremos para
   representar una teselación poligonal como $\{p,q\}$, donde $p$ es el
@@ -519,6 +527,21 @@ plano euclídeo en las que la suma de ángulos en cada vértice era
 exactamente $2\pi$, como $\{3,3\}$, $\{4,4\}$ o $\{6,3\}$. Pero en su
 lugar, podremos realizar teselaciones donde unimos polígonos cuyos
 ángulos en el plano sumarían más de $2\pi$.
+
+\begin{theorem}
+  Se puede determinar si una teselación $\{p,q\}$ es posible en el plano
+  euclídeo, el hiperbólico o el elíptico, sabiendo que si
+
+  \[
+    \left\{
+      \begin{array}{cc}
+        1/p + 1/q = 1/2    &\text{ ssi es posible en el plano euclídeo} \\
+        1/p + 1/q \leq 1/2 &\text{ ssi es posible en el hiperbólico} \\
+        1/p + 1/q \geq 1/2 &\text{ ssi es posible en el elíptico} \\
+      \end{array}
+    \right\}
+  \]
+\end{theorem}
 
 Presentamos ejemplos de las teselaciones regulares $\{3,7\}$, $\{4,5\}$
 y $\{7,3\}$ en la figura \ref{tiling}.
