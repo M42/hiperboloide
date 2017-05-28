@@ -248,6 +248,51 @@ homeomorfo a un plano, por lo que lo llamaremos \textit{plano hiperbólico}.
 \end{itemize}
 
 
+\subsection{Disco de Beltrami-Klein}
+
+\begin{definition}
+  El \textbf{modelo de Beltrami-Klein} interpreta como puntos los puntos
+  del interior de un disco unidad y como líneas las cuerdas del círculo
+  abiertas, en el sentido de que no se consideran en ella los puntos de
+  la frontera del círculo.
+\end{definition}
+
+Veremos que el disco de Beltrami-Klein, al contrario que el disco de
+Poincaré, no es \textbf{conforme}, es decir, los ángulos en el modelo
+no se corresponden con los ángulos hiperbólicos.
+
+\subsubsection{Métricas de Cayley-Kelvin}
+\begin{definition}
+  Fijada una cuádrica $Q$ definimos la \textbf{distancia de Cayley-Kelvin}
+  entre dos puntos como el logaritmo de una razón doble
+
+  \[
+    \mathrm{dist}(p,q) = C\log\frac{|qa||bp|}{|pa||bq|},
+  \]
+
+  donde $a$ y $b$ son los puntos en los que la recta que pasa por $p$
+  y $q$ corta a $Q$. La $C$ es una constante arbitraria.
+\end{definition}
+
+La métrica que usamos en nuestro caso en el disco de Beltrami-Klein es
+un caso particular de una métrica de Cayley-Kelvin cuando la cuádrica
+es el círculo. La distancia se define entonces como
+
+\[
+  \mathrm{dist}(p,q) = \frac{1}{2}\log\frac{|qa||bp|}{|pa||bq|},
+\]
+
+donde $a,b$ son los puntos en los que la recta entre $p$ y $q$ corta
+al borde del disco unidad.
+
+\begin{theorem}
+  Si desde el origen hasta un punto hay una distancia euclídea de $r$
+  en la bola, la distancia hiperbólica entre ambos es
+  \[
+    \mathrm{dist}(o,p) = \frac{1}{2} \log\left(\frac{1+r}{1-r}\right) = \mathrm{artanh}(r),
+  \]
+  donde $\mathrm{artanh}$ es el arcotangente hiperbólico.
+\end{theorem}
 
 \subsection{Disco de Poincaré}
 
