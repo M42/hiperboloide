@@ -491,6 +491,109 @@ Eva Mª González \and Margarita Gómez  \\ David Melero \and Mario Román \texo
 \end{frame}
 
 \begin{frame}{Hexágono regular}
+  \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=60mm]{./hexagon.png}
+    \caption{Construcción del hexágono regular \label{hexagon}}
+  \end{figure}
+\end{frame}
+
+
+\subsection{Teselaciones}
+
+\begin{frame}{Teselaciones regulares}
+\begin{definition}
+  El \textbf{símbolo de Schläfli} es una notación usada para definir
+  teselaciones y polítopos regulares. En nuestro caso la usaremos para
+  representar una teselación poligonal como $\{p,q\}$, donde $p$ es el
+  polígono que da la teselación y $q$ el número de polígonos que se unen
+  en un vértice.
+\end{definition}
+
+En el plano hiperbólico no podremos realizar las teselaciones del
+plano euclídeo en las que la suma de ángulos en cada vértice era
+exactamente $2\pi$, como $\{3,3\}$, $\{4,4\}$ o $\{6,3\}$. Pero en su
+lugar, podremos realizar teselaciones donde unimos polígonos cuyos
+ángulos en el plano sumarían más de $2\pi$.
+\end{frame}
+
+\begin{frame}{Teselaciones regulares}
+  Presentamos ejemplos de las teselaciones regulares $\{3,7\}$, $\{4,5\}$
+  y $\{7,3\}$
+
+  \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=30mm]{./tiling-3-7.png}
+    \quad
+    \includegraphics[width=30mm]{./tiling-4-5.png}
+    \quad
+    \includegraphics[width=30mm]{./tiling-7-3.png}
+    \caption{Teselaciones regulares \label{tiling}}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Teselaciones con vértices ideales}
+  Pero además de estas teselaciones, como todas las teselaciones de
+  la forma $\{a,b\}$ son válidas para números suficientemente grandes,
+  podemos hacer tender por separado ambas a infinito. Si hacemos tender
+  $b \to \infty$, obtendremos teselaciones con vértices ideales en las
+  que se unen un número infinito de polígonos. Por ejemplo en la
+  aquí se pueden ver ejemplos de teselaciones $\{3,\infty\}$
+  y $\{5,\infty\}$.
+
+  \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=30mm]{./tiling-3-i.png}
+    \quad
+    \includegraphics[width=30mm]{./tiling-5-i.png}
+  \end{figure}
+\end{frame}
+
+
+\begin{frame}{Apeirógonos}
+  \begin{definition}
+    Un \textbf{apeirógono} es un polígono degenerado con un número de
+    lados infinito numerable. Surge como límite natural de los polígonos
+    al incrementar el número de lados.
+  \end{definition}
+
+  Haciendo tender $a \to \infty$ obtendremos teselaciones con
+  apeirógonos.  Ejemplos de estas teselaciones son las teselaciones
+  $\{\infty,3\}$ o $\{\infty,5\}$. Nótese que en ellas cada apeirógono
+  está circunscrito en un horociclo.
+
+  \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=30mm]{./tiling-i-3.png}
+    \quad
+    \includegraphics[width=30mm]{./tiling-i-5.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Teselación infinita con apeirógonos}
+  \begin{figure}[ht!]
+    \centering
+    \includegraphics[width=50mm]{./tiling-i-i.png}
+  \end{figure}
+\end{frame}
+
+\subsection{Teselaciones no regulares}
+\begin{frame}
+  \subsubsection{Teselaciones no regulares}
+  Además de las teselaciones regulares, que son aquellas en las que
+  todos los polígonos son idénticos, existen
+
+  \begin{itemize}
+  \item \textbf{Teselaciones truncadas}, que se obtienen desde las
+    regulares aplicando truncamiento, de forma similar a como se hacía
+    en \textit{sólidos arquimedianos}.
+    \pause
+  \item \textbf{Teselaciones cuasirregulares}, en las que se alternan
+    dos polígonos regulares distintos en cada vértice.
+    \pause
+  \item \textbf{Teselaciones semirregulares}, que constan de más de un
+    tipo de polígono regular en cada vértice.
+  \end{itemize}
 \end{frame}
 
 
