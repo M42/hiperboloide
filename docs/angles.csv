@@ -1,6 +1,6 @@
 NonEuclid fileFormat.1.0
-
-
+<br>Ángulos y área</br>
+Los ángulos de un triángulo están directamente relacionados con el área que ocupa. Tenemos un teorema que nos dice que<ul><li>dos triángulos con los mismos ángulos en el plano hiperbólico son congruentes.</li></ul>Pero además tenemos la siguiente fórmula que relaciona directamente el área de un triángulo $T$ con sus ángulos $\alpha,\beta,\gamma$ como \[\pi - \alpha- \beta - \gamma = \mathrm{área}(T)\].<br> Esto nos permite crear triángulos con ángulos arbitrariamente pequeños, simplemente haciendo que ocupen el área necesaria.
 68
 7,false,#463264,-0.68,-0.6285714285714286,A,8,-4,-1,-1,false
 7,false,#463264,-0.02857142857142857,0.9,C,8,-4,-1,-1,false
