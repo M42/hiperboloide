@@ -1,6 +1,6 @@
 NonEuclid fileFormat.1.0
-
-
+<br>Hexágono regular</br>
+Este es un hexágono regular en el plano hiperbólico que tiene todos sus lados y sus ángulos iguales. Nótese que el área dependerá de sus ángulos, por lo que en particular podremos construir hexágonos con todos sus ángulos rectos.<br>Para construir este hexágono hemos fijado dos puntos $A,B$ y sobre ellos hemos construido un triángulo equilátero. Los cortes de las mediatrices de este triángulo con la circunferencia en la que está inscrito nos dan el hexágono regular.<br><ul><li>En particular, nótese que la construcción que toma la distancia entre dos lados y la repite en la circunferencia no funciona.</li></ul>
 71
 7,false,#463264,-0.5771428571428572,0.15142857142857144,A,8,-4,-1,-1,false
 7,false,#463264,0.33714285714285713,0.14857142857142858,E,8,-4,-1,-1,false
