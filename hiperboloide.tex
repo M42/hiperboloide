@@ -285,6 +285,16 @@ es el círculo. La distancia se define entonces como
 donde $a,b$ son los puntos en los que la recta entre $p$ y $q$ corta
 al borde del disco unidad.
 
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=80mm]{./kleinmodelcircles.png}
+  \caption{Círculos en el disco de Klein. \textit{Wikimedia Commons}\label{kleincircles}}
+\end{figure}
+
+En la figura \ref{kleincircles} podemos observar cómo las circunferencias
+en el disco de Klein se dibujan como elipses una vez se acercan al borde.
+Esto es debido a la no-conformidad del modelo.
+
 \begin{theorem}
   Si desde el origen hasta un punto hay una distancia euclídea de $r$
   en la bola, la distancia hiperbólica entre ambos es
@@ -293,6 +303,7 @@ al borde del disco unidad.
   \]
   donde $\mathrm{artanh}$ es el arcotangente hiperbólico.
 \end{theorem}
+
 
 \subsection{Disco de Poincaré}
 
@@ -397,6 +408,8 @@ con su lado opuesto.
   sigue que ambas son ultraparalelas.
 \end{theorem}
 
+
+
 \subsection{Círculos, horociclos e hiperciclos}
 Sabemos ya que dos rectas distintas en el espacio hiperbólico
 deben ser secantes, paralelas o ultraparalelas. Deberán por tanto
@@ -442,6 +455,8 @@ punto impropio en el infinito.
 Podemos caracterizarlo a su vez como la órbita de un punto bajo las reflexiones
 sobre las rectas de un haz de ultraparalelas.\cite{coxeter}
 
+
+
 \subsection{Polígonos}
 \begin{theorem}
   Los ángulos constructibles en el plano euclídeo son exactamente los ángulos
@@ -461,6 +476,73 @@ todos sus ángulos rectos
 \end{figure}
 
 \subsection{Teselaciones}
+\begin{definition}
+  El \textbf{símbolo de Schläfli} es una notación usada para definir
+  teselaciones y polítopos regulares. En nuestro caso la usaremos para
+  representar una teselación poligonal como $\{p,q\}$, donde $p$ es el
+  polígono que da la teselación y $q$ el número de polígonos que se unen
+  en un vértice.
+\end{definition}
+
+En el plano hiperbólico no podremos realizar las teselaciones del
+plano euclídeo en las que la suma de ángulos en cada vértice era
+exactamente $2\pi$, como $\{3,3\}$, $\{4,4\}$ o $\{6,3\}$. Pero en su
+lugar, podremos realizar teselaciones donde unimos polígonos cuyos
+ángulos en el plano sumarían más de $2\pi$.
+
+Presentamos ejemplos de las teselaciones regulares $\{3,7\}$, $\{4,5\}$
+y $\{7,3\}$ en la figura \ref{tiling}.
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=30mm]{./tiling-3-7.png}
+  \includegraphics[width=30mm]{./tiling-4-5.png}
+  \includegraphics[width=30mm]{./tiling-7-3.png}
+  \caption{Teselaciones regulares \label{tiling}}
+\end{figure}
+
+Pero además de estas teselaciones, como todas las teselaciones de
+la forma $\{a,b\}$ son válidas para números suficientemente grandes,
+podemos hacer tender por separado ambas a infinito. Si hacemos tender
+$b \to \infty$, obtendremos teselaciones con vértices ideales en las
+que se unen un número infinito de polígonos. Por ejemplo en la
+figura \ref{tiling2} se pueden ver ejemplos de teselaciones $\{3,\infty\}$
+y $\{5,\infty\}$.
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=30mm]{./tiling-3-i.png}
+  \includegraphics[width=30mm]{./tiling-5-i.png}
+  \caption{Teselaciones regulares con vértices ideales \label{tiling2}}
+\end{figure}
+
+\begin{definition}
+  Un \textbf{apeirógono} es un polígono degenerado con un número de
+  lados infinito numerable. Surge como límite natural de los polígonos
+  al incrementar el número de lados.
+\end{definition}
+
+Haciendo tender $a \to \infty$ obtendremos teselaciones con apeirógonos.
+Ejemplos de estas teselaciones son las teselaciones $\{\infty,3\}$ o
+$\{\infty,5\}$ que podemos ver en \ref{tiling3}. Nótese que en ellas
+cada apeirógono está circunscrito en un horociclo.
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=30mm]{./tiling-i-3.png}
+  \includegraphics[width=30mm]{./tiling-i-5.png}
+  \caption{Teselaciones regulares con apeirógonos \label{tiling3}}
+\end{figure}
+
+Para finalizar, podemos hacer referencia a la teselación que usa un
+número infinito de apeirógonos en cada vértice en \ref{tiling4}.
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[width=30mm]{./tiling-i-i.png}
+  \caption{Teselación infinita con apeirógonos \label{tiling4}}
+\end{figure}
+
 \subsubsection{Teselación con hexágonos rectos}
 Podemos teselar un plano hiperbólico con hexágonos con todos sus ángulos rectos,
 como puede apreciarse en la figura \ref{teselahexagon}.
@@ -471,6 +553,7 @@ Nótese que todos ellos son \textit{congruentes}.
   \includegraphics[width=80mm]{./teselahexagonos.png}
   \caption{Teselación con hexágonos rectos\label{teselahexagon}}
 \end{figure}
+
 
 
 % https://www.rose-hulman.edu/mathjournal/archives/2014/vol15-n1/paper2/v15n1-2pd.pdf

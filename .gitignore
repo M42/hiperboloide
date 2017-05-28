@@ -7,3 +7,4 @@ ltximg/*
 *.toc
 *.nav
 *.tex
+/hiperboloide.idx
