@@ -145,13 +145,13 @@
 La \textbf{geometría hiperbólica} es el modelo axiomático que se
 obtiene al aceptar los cuatro primeros postulados de la geometría
 euclídea y sustituir el quinto postulado, por el postulado de
-Lobachevsky. A pesar de este cambio, algunos aspectos y teoremas
+Lobachevsky. A pesar de este cambio, los aspectos y teoremas
 de la geometría euclídea que sean independientes del quinto postulado
 seguirán siendo válidos.
 
-Históricamente, se han realizado esfuerzos por deducir el quinto
+Históricamente, se realizaron esfuerzos por deducir el quinto
 postulado de Euclides de los otros cuatro. \textit{Giovanni Gerolamo
-  Saccheri} intentó, en el siglo XVIII probarlo por reducción al
+  Saccheri} intentó en el siglo XVIII probarlo por reducción al
 absurdo y creó en el proceso un modelo incipiente de geometría
 hiperbólica que nunca llegó a formalizar en su creencia de que sería
 inconsistente. Por otro lado, \textit{Johann Heinrich Lambert} estudió
@@ -196,7 +196,6 @@ reales tales que al menos uno de ellos no sea $0$. Existen varios
 modelos de geometría hiperbólica:
 
 \begin{itemize}
-  
 \item la \textbf{representación de Klein}, también conocida como el
   \textit{modelo proyectivo del disco} o \textit{modelo de
     Beltrami-Klein}, toma como puntos a los puntos interiores de
@@ -212,7 +211,6 @@ modelos de geometría hiperbólica:
   como espacio de puntos una hoja de un hiperboloide de dos hojas
   y como rectas los cortes de este con los hiperplanos del espacio
   de Minkowski en el que se embebe el hiperboloide.
-  
 \end{itemize}
 
 Aunque los dos primeros fueron publicados por \textit{Eugenio
@@ -232,9 +230,9 @@ distintos de cero con norma cero e incluso norma negativa. Esto nos da
 una clasificación de los vectores en
 
 \begin{enumerate}
-\item vectores espaciales, $x\in\mathbb{R}^3$ tales que $L(x)>0$;
-\item vectores temporales, $x\in\mathbb{R}^3$ tales que $L(x)<0$; y
-\item vectores luminosos, $x\in\mathbb{R}^3$ tales que $L(x)=0$.
+\item \textbf{vectores espaciales}, $x\in\mathbb{R}^3$ tales que $L(x)>0$;
+\item \textbf{vectores temporales}, $x\in\mathbb{R}^3$ tales que $L(x)<0$; y
+\item \textbf{vectores luminosos}, $x\in\mathbb{R}^3$ tales que $L(x)=0$.
 \end{enumerate}
 
 Con esta norma definimos
@@ -252,15 +250,15 @@ homeomorfo a un plano, por lo que lo llamaremos \textit{plano hiperbólico}.
 \end{itemize}
 
 \subsubsection{Rectas}
-Así,utilizando la relación con el proyectivo,por cualesquiera dos
-puntos de $\mathbb{H}^2$ pasa una única recta, la correspodiente a la
+Así, utilizando la relación con el proyectivo, por cualesquiera dos
+puntos de $\mathbb{H}^2$ pasará una única recta, la correspodiente a la
 que nos da la geometría proyectiva; si dos rectas se intersectan es en
 un único punto y las rectas se extienden indefinidamente en dos
 direcciones.
 
 Vamos a ver que efectivamente no se cumple el quinto postulado. Sea
-$r$ una recta hiperbólica, y $p$ un punto fuera de ella.Abusando de
-notación,podemos llamar r también a la recta proyectiva
+$r$ una recta hiperbólica, y $p$ un punto fuera de ella. Abusando de
+notación, podemos llamar $r$ también a la recta proyectiva
 correspondiente. Por cada punto $q\in{r}$ que no sea temporal podemos
 trazar la recta que pasa por $p$ y $q$, la denotamos por $s_q$. Puesto
 que $q\in{s_q}$ esta representa un recta hiperbólica que no intersecta
@@ -269,7 +267,7 @@ $r\cap{s_q}=q\not\in\mathbb{H}^2$. Así que tenemos varias rectas que
 no cortan a nuestra recta inicial $r$,luego el quinto postulado no se
 cumple en su parte de unicidad.
 
-Así clasificamos dos rectas según su intersección en
+Clasificamos dos rectas según su intersección en
 
 \begin{enumerate} 
 \item{Rectas concurrentes: Si la intersección es un punto temporal.}
@@ -280,6 +278,7 @@ Así clasificamos dos rectas según su intersección en
 \subsection{Disco de Poincaré}
 
 \subsubsection{Métrica en el disco de Poincaré}
+\begin{definition}
 Si $u,v$ son dos vectores del espacio euclídeo $\mathbb{R}^n$,ambos
 con norma inferior a $1$, podemos definir un invariante isométrico de
 la siguiente manera:
@@ -288,6 +287,7 @@ la siguiente manera:
 donde $\norm{.}$ representa la norma euclídea usual. Definimos la
 función distancia como:
 \[d(u,v)=arccosh(1+\delta(u,v)).\]
+\end{definition}
 
 Esta función de distancia está definida para cualesquiera dos vectores
 de norma inferior a uno, y el conjunto de tales vectores forman un
@@ -352,20 +352,20 @@ vectores temporales, intersecta a $\mathbb{H}_2$ en un único
 punto). En general, cualquier recta no luminosa tiene exactamente dos
 vectores unitarios con respecto a la norma definida por la métrica de
 Lorentz que son inversos con respecto a la suma igual que pasa con la
-métrica euclídea.Si la recta está formada por vectores temporales,
+métrica euclídea. Si la recta está formada por vectores temporales,
 entonces uno de ellos está en $\mathbb{H}_2$.
 
 Podemos entonces identificar a $\mathbb{H}_2$ con el interior del
-disco unitario y a esos puntos los llamaremos puntos del plano
-hiperbólico. Los puntos luz son los del círculo $S_1$ que no están en
-el hiperbólico.A los demás puntos fuera del disco unidad se les
-llamarán puntos espaciales. Este es el modelo proyectivo que es muy
+disco unitario, y a esos puntos llamarlos \textit{puntos del plano
+hiperbólico}. Los puntos luz son los del círculo $S_1$ que no están en
+el hiperbólico. A los demás puntos, fuera del disco unidad, se les
+llamará \textit{puntos espaciales}. Este es el modelo proyectivo que es muy
 conveniente para hacer dibujos.
 
-La definición de rectas hiperbólicas se explica mejor ahora ya que son
+La definición de rectas hiperbólicas se explica mejor ahora, ya que son
 las intersecciones de rectas proyectivas con el plano hiperbólico.
 
-La proyección de la que hemos hablado antes se hace de la siguiente
+La proyección anterior puede realizarse de la siguiente
 manera: dado un punto $(t, x_1,x_2)$ sobre la hoja superior de un
 hiperboloide del modelo del hiperboloide, se define un punto del
 modelo del disco de Poincaré, que se puede proyectar sobre el plano
@@ -483,7 +483,7 @@ con su lado opuesto.
 
 
 
-\subsection{Círculos, horociclos e hiperciclos}
+\subsection{Circunferencias, horociclos e hiperciclos}
 Sabemos ya que dos rectas distintas en el espacio hiperbólico
 deben ser secantes, paralelas o ultraparalelas. Deberán por tanto
 pertenecer a uno de los siguientes conjuntos
@@ -500,8 +500,8 @@ Usaremos las reflexiones sobre estas rotaciones para caracterizar los
 círculos y definir con ellas los horociclos por analogía con la
 caracterización y los hiperciclos por analogía con la definición.
 
-\begin{definition}[Círculo]
-  Dado un punto $C$ y un radio $r \geq 0$, llamamos \textbf{círculo}
+\begin{definition}[Circunferencia]
+  Dado un punto $C$ y un radio $r \geq 0$, llamamos \textbf{circunferencia}
   al conjunto de puntos a distancia $r$ de él, es decir,
   \[{\cal C} = \left\{ X \mid \mathrm{dist}(X,C) = r \right\}.\]
 \end{definition}
